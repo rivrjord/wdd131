@@ -100,7 +100,7 @@ nav {
 .right {
     background-color: #242323;
     grid-column: 2/3;
-    padding-right: 0;
+    /* padding-right: 0; */
     text-align: left;
     margin-left: 0.5rem; /* tiny gap between left and right */  ;
 }

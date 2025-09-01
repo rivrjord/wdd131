@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Lawrence Okon</title>
-    <meta name="description" content="Lawrence Okon Dynamic Web Fundamental, WDD 131 Website">
+    <title>WDD 131 – Dynamic Web Fundamentals – Lawrence Okon</title>
+    <meta name="description" content="Lawrence Okon | Dynamic Web Fundamental | WDD 131 Website">
     <meta name="author" content="Lawrence Okon">
     <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/getdates.js"></script>
+    <script src="scripts/getdates.js" defer></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,63 +18,86 @@
 </head>
 
 <body>
-    <div class="body">
-        <header>
-            <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
-            <nav>
-                <ul class="navigation">
-                    <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
-                    <li><a href="https://byupw.instructure.com/">Canvas</a></li>
-                    <li><a
-                            href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng">Scripture</a>
-                    </li>
-                    <li><a href="#">Final Project</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="left">
-            <main>
-                <!-- <h1>Lawrence Okon</h1> -->
-                <section class="card">
-                    <h2>About Me</h2>
-                    <div class="inline-container">
-                        <p>Hello! My name is Lawrence Okon, and I am a dedicated student at BYU-Pathway. I am passionate
+    <header>
+        <span id="title">WDD 131 - Dynamic Web Fundamentals</span>
+        <nav class="navigation">
+
+            <ul>
+                <li><a href="https://www.linkedin.com/in/lawrence-okon-53521b1aa?utm_source=share&utm_campaign=share_via&utm_content=profile&ut-m_meium=ios_app" target="_blank">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng" target="_blank">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Lawrence Okon</h1>
+        <section class="container-grid">
+
+            <!-- Left Card -->
+            <section class="card1">
+                <h2 class="card-title">About Me</h2>
+                
+                <div class="about">
+                    <div class="about-text">
+                        <p>
+                            Hello! My name is Lawrence Okon, and I am a dedicated student at BYU-Pathway. I am passionate
                             about web development and eager to learn more about creating dynamic and engaging websites.
-                            In my free time, I enjoy playing the piano, hiking, and exploring new technologies.</p>
-                        <img src="images/profile.webp" alt="Lawrence's portrait">
+                            In my free time, I enjoy playing the piano, reading, and exploring new technologies. 
+                            <br> <br>Studying with BYU has strengthened my programming foundation through courses like Programming Building Blocks, 
+                            Functions, Classes and Web Development etc. I am now looking for internship opportunities or junior developer roles to apply and grow these skills.
+                        </p>
+                        <!-- <img src="images/profile.webp" alt="Lawrence's portrait"> -->
+                        <h3 class="subheading">Calabar, Nigeria</h3>
+                        <div class="place">
+                            <figure class="nigeria">
+                                <img src="images/flag.jpg" width="200" height="141" alt="Official flag of Nigeria">
+                                <figcaption><em>The Official Flag of the Federal Republic of Nigeria</em></figcaption>
+                            </figure>
+
+                            <p>
+                                Nigeria is the most populated black country in the world, located in West Africa along the
+                                Gulf of Guinea. Known as the "Giant of Africa", it is a diverse nation with
+                                with over 250 ethnic groups. Nigeria is rich in natural resources, particularly oil and gas,
+                                and has a vibrant cultural heritage expressed through music, art and festivals.
+                            </p>   
+                        </div>
                     </div>
-                    <div class="divider">
-                        <h3>Calabar, Nigeria</h3>
+                    
+                    <div class="about-photo">
+                        <img src="images/profile.webp" width="260" height="320" alt="Lawrence's portrait">
                     </div>
-                    <div class="inline-container">
-                        <img src="images/flag.jpg" alt="Nigria's flag">
-                        <p>Nigeria is the most populated black country in the world, located in West Africa aong the
-                            Gulf of Guinea. Known as the "Giant of Africa", it is a diverse nation with
-                            with over 250 ethnic groups. Nigeria is rich in natural resources, particularly oil and gas,
-                            and has a vibrant cultural heritage expressed through music, art and festivals.</p>
-                    </div>
-                </section>
-            </main>
-        </div>
-        <div class="right">
-            <section class="card">
-                <h2>Web Dev Resources</h2>
-                <div>
-                    <ul>
-                        <li><a href="https://www.w3schools.com/">W3Schools</a></li>
-                        <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
-                        <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
-                        <li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
-                        <li><a href="https://web.dev/">Web.dev</a></li>
-                    </ul>
                 </div>
             </section>
-        </div>
-        <footer>
-            <p>&copy; 2025 - <span id="footer-date"></span> Lawrence Okon - Nigeria</p>
-            <p id="lastModified"></p>
-        </footer>
-    </div>
+
+            <!-- Right Card -->
+            <section class="card2">
+                <h2 class="card-title">Web Dev Resources</h2>
+                <ul class="links">
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
+                    <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+                    <li><a href="https://squoosh.app" target="_blank">squoosh </a></li>
+                    <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+                    <li><a href="https://web.dev/" target="_blank">Web.dev</a></li>
+                </ul>
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            &copy; <span id="currentyear"></span> 
+            <span class="dot">—</span> 
+            Lawrence Okon
+            <span class="dot">—</span>
+            Nigeria
+        </p>
+
+        <p id="lastmodified" class="lastmod" aria-live="polite"></p>
+    </footer>
 </body>
 
 </html>

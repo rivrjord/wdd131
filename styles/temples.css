@@ -50,14 +50,14 @@ body {
     background-color: var(--bg);
 }
 
-h1 {
-    font-size: 1rem;
+h2 {
+    font-size: 3rem;
     padding: 1rem;
     color: var(--ink);
     text-align: center;
 }
 
-span {
+h1 {
     color: var(--ink);
     font-weight: 900;
 }

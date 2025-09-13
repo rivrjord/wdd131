@@ -1,0 +1,166 @@
+/* Root Library */
+:root {
+    --nav: #000000;
+    --header: #191f23;
+    --accent1: #6484ab;
+    --accent: #FFB020;
+    --bg: #253844;
+    --card1: #6e6a6a;
+    --card2: #242323;
+    --ink: #ffffff;
+    --muted: wheat;
+    --border: #E1E7EF;
+    --radius: 12px;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .05), 0 6px 18px rgba(0, 0, 0, .06);
+    --maxw: 1000px;
+    --link: wheat;
+    --link-hover: #FFB020;
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --focus: #FFB020;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+    font-family: var(--font);
+    font-size: small;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {    
+    background: var(--nav);
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    width: 100%;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+#Place-title {
+    margin: 0;
+    font-size: clamp(1.5rem, 2vw + .6rem, 2rem);
+    color: var(--accent);
+    font-weight: 900;
+    line-height: 1;
+}
+
+.hero {
+    text-align: center;
+    background-color: #000000 ;
+}
+
+
+.hero-container {
+    position: static;
+    width: 100%;
+    max-width: var(--maxw);
+}
+
+.hero-container picture img {
+    width: 100%;
+    max-width: var(--maxw);
+}
+
+.info {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 1rem;
+    
+}
+
+.card {
+    background-color: var(--card2);
+    padding: 1rem;
+    width: 100%;
+    margin: 0 auto 2rem auto;
+    max-width: var(--maxw);
+}
+
+.card h2 {
+    color: var(--accent);      /* bold accent color */
+    font-weight: 900;          /* extra bold */
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2); /* optional for contrast */
+    padding: 0.5rem;
+    margin: 0 0 1rem -2rem;
+}
+#card2 h2 {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+#card2 h2::after {
+    content: "\26C5"; /* Unicode for weather icon */
+    display: block;
+    font-size: 2rem;
+    margin: 0.5rem auto 0 auto;
+    opacity: 0.95;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.label {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+}
+
+.value {
+    flex: 2;
+    text-align: left;
+}
+
+.footer {
+    width: 100%;
+    background: var(--nav);
+    color: #E6EEF7;
+    text-align: center;
+    padding: 1rem .75rem .5rem;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.footer p {
+    margin: .25rem 0;
+}
+
+
+.footer .dot {
+    margin: 0 .35rem;
+}
+
+.lastmod {
+    color: var(--accent);
+    font-weight: 300;
+    letter-spacing: .2px;
+}

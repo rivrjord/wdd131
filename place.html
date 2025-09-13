@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place – Dynamic Web Fundamentals – Lawrence Okon</title>
+    <meta name="description" content="Lawrence Okon | Dynamic Web Fundamental | place Website">
+    <meta name="author" content="Lawrence Okon">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MRoboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <span id="Place-title">Nigeria</span>
+    </header>
+    <main>
+        <div class="hero-container">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 999px)">
+                <img src="images/hero-large.webp" alt="Rome Italy Temple">
+            </picture> 
+            <section class="card" id="card1">
+                <div class="card-title">
+                    <h2>Data</h2>       
+                </div>
+                <div class="row"><span class="label">Population:</span><span class="value">223 million (2023)</span></div>
+                <div class="row"><span class="label">Area:</span><span class="value">923,768 sq km (356,669 sq mi)</span></div>
+                <div class="row"><span class="label">Capital:</span><span class="value">Abuja</span></div>
+                <div class="row"><span class="label">Official Language:</span><span class="value">English</span></div>
+                <div class="row"><span class="label">Currency:</span><span class   ="value">Nigerian Naira (₦,NGN)</span></div>
+                <div class="row"><span class="label">GDP:</span><span class="value">$440 billion (2023 est.)</span></div>
+                <div class="row"><span class="label">Time Zone:</span><span class="value">UTC+2</span></div>
+                <div class="row"><span class="label">Calling Code:</span><span class="value">+234</span></div>
+                <div class="row"><span class="label">Internet TLD:</span><span class="value">.ng</span></div>
+            </section>
+
+            <section class="card weather" id="card2">
+                <div class="card-title" id="weather-title">
+                    <h2>Weather</h2>
+                </div>
+                <!-- <img src="images/weather.png" alt="weather icon"> -->
+                <div class="row"><span class="label">Climate:</span><span class="value">Tropical in south, arid in north</span></div>
+                <div class="row"><span class="label">Temperature:</span><span class="value">25-30°C (77-86°F)</span></div>
+                <div class="row"><span class="label">wind:</span><span class="value">5km/h</span></div>
+                <div class="row"><span class="label">Wind Chill:</span><span class="value" id="windchill">N/A</span></div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <p>
+                &copy; <span id="currentyear"></span>
+                <span class="dot">—</span>
+                Lawrence Okon
+                <span class="dot">—</span>
+                Nigeria
+            </p>
+
+            <p id="lastmodified" class="lastmod" aria-live="polite"></p>
+        </footer>
+    </main>
+</body>
+</html>

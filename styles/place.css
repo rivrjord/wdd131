@@ -90,6 +90,7 @@ header {
     max-width: var(--maxw);
     margin: 0 auto;
     padding: 1rem;
+    align-content: center;
     
 }
 
@@ -121,6 +122,17 @@ header {
     font-size: 2rem;
     margin: 0.5rem auto 0 auto;
     opacity: 0.95;
+}
+
+#card2 .card-title {
+    display: block;
+    text-align: center;
+}
+#card2 .card-title img {
+    display: none; /* This will hide the SVG icon */
+    margin: 0.5rem auto 0 auto;
+    width: 2rem;
+    height: 2rem;
 }
 
 .row {
@@ -164,3 +176,5 @@ header {
     font-weight: 300;
     letter-spacing: .2px;
 }
+
+

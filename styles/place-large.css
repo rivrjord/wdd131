@@ -66,12 +66,17 @@
         opacity: 0.95;
         transform: translateY(1px);
     }
-
     #card2 .card-title {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 0.5rem;
     }
-
+    #card2 .card-title img {
+        display: none; /* This will hide the SVG icon */
+        width: 2rem;
+        height: 2rem;
+        margin-left: 0.5rem;
+        vertical-align: middle;
+}
 }

@@ -45,7 +45,7 @@ main {
     justify-content: center;
 }
 
-header {
+header {    
     background: var(--nav);
     border-top: 1px solid rgba(255, 255, 255, .08);
     width: 100%;
@@ -68,7 +68,7 @@ header {
 
 .hero {
     text-align: center;
-    background-color: #000000;
+    background-color: #000000 ;
 }
 
 
@@ -91,7 +91,7 @@ header {
     margin: 0 auto;
     padding: 1rem;
     align-content: center;
-
+    
 }
 
 .card {
@@ -103,17 +103,13 @@ header {
 }
 
 .card h2 {
-    color: var(--accent);
-    /* bold accent color */
-    font-weight: 900;
-    /* extra bold */
+    color: var(--accent);      /* bold accent color */
+    font-weight: 900;          /* extra bold */
     text-align: center;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    /* optional for contrast */
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2); /* optional for contrast */
     padding: 0.5rem;
     margin: 0 0 1rem -2rem;
 }
-
 #card2 h2 {
     display: block;
     text-align: center;
@@ -121,25 +117,27 @@ header {
 }
 
 #card2 h2::after {
-    content: "\26C5";
-    /* Unicode for weather icon */
-    display: block;
-    font-size: 3rem;
-    margin: 0.5rem auto 0 auto;
-    opacity: 0.95;
+    content: "";
+    display: block; 
+    width: 4rem;
+    height: 4rem;
+    margin: 1rem auto 0;
+    background-image: url('../images/weather.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #card2 .card-title {
     display: block;
     text-align: center;
 }
-
-/* #card2 .card-title img {
-    display: none; This will hide the SVG icon */
-/* margin: 0.5rem auto 0 auto;
+#card2 .card-title img {
+    display: block; /* This will hide the SVG icon */
+    margin: 0.5rem auto 0 auto;
     width: 2rem;
-    height: 2rem; */
-/* } */
+    height: 2rem;
+}
 
 .row {
     display: flex;
@@ -182,3 +180,5 @@ header {
     font-weight: 300;
     letter-spacing: .2px;
 }
+
+

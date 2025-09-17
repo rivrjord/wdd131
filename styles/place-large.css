@@ -59,17 +59,12 @@
         padding: 0rem 6rem;
     }
     #card2 h2::after {
-        content: "";
-        display: inline-block; /* Change to inline-block */
-        width: 2rem;
-        height: 2rem;
-        margin-left: 0.5rem; /* Add space next to the title */
-        background-image: url('../images/weather.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        transform: translateY(-5px); /* Add this line to move the icon up */
+        background: none;
+        content: "\26C5"; /* Unicode for weather icon */
+        font-size: 2rem;
+        vertical-align: middle;
+        opacity: 0.95;
     }
-
     #card2 .card-title {
         display: flex;
         align-items: center;
@@ -77,10 +72,7 @@
         gap: 0.5rem;
     }
     #card2 .card-title img {
-        display: none; /* This will hide the SVG icon */
-        width: 2rem;
-        height: 2rem;
-        margin-left: 0.5rem;
-        vertical-align: middle;
-}
+        display: inline-block; /* Override the small-screen 'block' */
+        margin: 0; /* Reset margin */
+    }
 }

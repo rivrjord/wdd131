@@ -116,13 +116,25 @@ header {
     position: relative;
 }
 
-#card2 h2::after {
-    content: "\26C5"; /* Unicode for weather icon */
-    display: block;
+/* #card2 h2::after {
+    content: "\26C5"; Unicode for weather icon */
+    /* display: block;
     font-size: 2rem;
     margin: 0.5rem auto 0 auto;
     opacity: 0.95;
+} */
+
+#card2 h2::after {
+    content: ""; /* Content must be an empty string */
+    display: block;
+    width: 2rem;  /* Set the size of the icon */
+    height: 2rem;
+    margin: 0.5rem auto 0 auto; /* Center it */
+    background-image: url('../images/weather.svg'); /* Use the SVG as a background */
+    background-size: contain;
+    background-repeat: no-repeat;
 }
+
 
 #card2 .card-title {
     display: block;

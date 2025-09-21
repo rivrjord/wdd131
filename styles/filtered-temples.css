@@ -18,6 +18,28 @@
     --focus: #FFB020;
 }
 
+.header-flex {
+    display: flex;
+    background-color: #000;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.5rem;
+}
+
+.navigation a {
+    color: wheat;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.temple-card {
+    background-color: #f0f8ff;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -86,7 +108,7 @@ p {
 #menu.show::before {
     content: "X";
     font-weight: lighter;
-    
+
 }
 
 
@@ -117,7 +139,7 @@ p {
     color: var(--link-hover);
     outline: none;
     text-decoration: underline;
-    font-weight: 900;
+    /* font-weight: 900; */
 }
 
 .temple-card {
@@ -175,4 +197,74 @@ p {
     color: var(--accent);
     font-weight: 300;
     letter-spacing: .2px;
+}
+
+@media only screen and (min-width: 30em) {
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        max-width: var(--maxw);
+        margin: 1rem auto 2rem;
+        padding: 0 1rem;
+        z-index: -1;
+    }
+}
+
+@media only screen and (min-width: 40em) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .header-bar {
+        display: flex;
+        background-color: black;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .header-flex {
+        padding-left: 0.5rem;
+        display: flex;
+        /* align-items: right; */
+        gap: 1rem;
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: space-between;
+        /* padding-left: 3rem; */
+        gap: 1rem;
+    }
+
+    .navigation li {
+        display: flex;
+        flex: 1 100%;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    #menu {
+        display: none
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        max-width: var(--maxw);
+        margin: 1rem auto 2rem;
+        padding: 0 1rem;
+        z-index: -1;
+    }
 }

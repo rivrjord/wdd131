@@ -1,0 +1,12 @@
+@media only screen and (min-width: 30em) {
+   
+   .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        max-width: var(--maxw);
+        margin: 1rem auto 2rem;
+        padding: 0 1rem;
+        z-index: -1;
+    }
+}

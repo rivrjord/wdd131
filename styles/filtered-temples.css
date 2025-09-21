@@ -31,14 +31,6 @@ img {
     text-align: center;
 }
 
-figcaption {
-    text-align: center;
-    padding: 0.5rem 0;
-    font-weight: 200;
-    color: var(--ink);
-    padding-bottom: 2rem;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -60,6 +52,10 @@ h2 {
 h1 {
     color: var(--ink);
     font-weight: 900;
+}
+
+p {
+    font-size: 0.8rem;
 }
 
 /* Mobile View */
@@ -84,7 +80,15 @@ h1 {
 
 #menu::before {
     content: "≡";
+    font-weight: lighter;
 }
+
+#menu.show::before {
+    content: "X";
+    font-weight: lighter;
+    
+}
+
 
 .navigation {
     list-style: none;
@@ -99,7 +103,7 @@ h1 {
 .navigation a {
     display: block;
     padding: 0.75rem;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
     color: var(--link);
     font-weight: 700;
@@ -116,13 +120,39 @@ h1 {
     font-weight: 900;
 }
 
+.temple-card {
+    background-color: #f0f8ff;
+    /* Light blue */
+    border: 1px solid #ccc;
+    /* Optional border */
+    padding: 15px;
+    /* Space inside the card */
+    margin: 10px;
+    /* Space between cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    text-align: center;
+    /* Center text */
+}
+
+.temple-card img {
+    padding-top: 1rem;
+    width: 100%;
+    height: auto;
+
+}
+
+.temple-card .label {
+    font-weight: bold;
+    color: var(--accent1);
+    /* Optional: make labels colored */
+}
+
+
 .show li {
     display: block;
 }
 
-#menu.show::before {
-    content: "X";
-}
 
 /* footer */
 .footer {

@@ -14,7 +14,7 @@
     .header-flex {
         padding-left: 0.5rem;
         display: flex;
-        /* align-items: space-between; */
+        /* align-items: right; */
         gap: 1rem;
     }
     .navigation {
@@ -51,6 +51,4 @@
         padding: 0 1rem;
         z-index: -1;
     }
-
-
 }

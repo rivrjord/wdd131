@@ -1,0 +1,86 @@
+
+body {
+    font-family: "Manrope", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #222;
+}
+
+
+header {
+    background: linear-gradient(to right, #16320D, #A68D4A);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+h1, h2, h3 {
+    font-family: "Inter", sans-serif;
+}
+
+header .tagline {
+font-size: 1.1rem;
+margin-top: 0.5rem;
+}
+
+
+main {
+padding: 2rem;
+max-width: 900px;
+margin: auto;
+}
+
+
+h2 {
+color: #16320d;
+border-bottom: 2px solid #A68D4A;
+padding-bottom: 0.3rem;
+}
+
+
+ul, ol {
+margin-left: 1.5rem;
+}
+
+
+footer {
+background: #16320d;
+color: #E0DED1;
+text-align: center;
+padding: 1rem;
+margin-top: 2rem;
+}
+
+
+footer a {
+color: #A68D4A;
+text-decoration: none;
+}
+
+
+.color-box {
+display: inline-block;
+width: 120px;
+height: 80px;
+margin: 10px;
+border-radius: 8px;
+color: #E0DED1;
+font-weight: bold;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+.color-box.green { background-color: #16320d; }
+.color-box.offwhite { background-color: #E0DED1; color: #000; }
+.color-box.gold { background-color: #A68D4A; color: #000; }

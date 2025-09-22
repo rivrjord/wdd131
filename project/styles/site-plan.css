@@ -64,7 +64,7 @@ margin-left: 1.5rem;
 
 footer {
 background: #16320d;
-color: #E0DED1;
+color: #ffffff;
 text-align: center;
 padding: 1rem;
 margin-top: 2rem;
@@ -72,8 +72,9 @@ margin-top: 2rem;
 
 
 footer a {
-color: #A68D4A;
+color: #E0DED1;
 text-decoration: none;
+font-style: oblique;
 }
 
 

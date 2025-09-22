@@ -31,6 +31,17 @@ font-size: 1.1rem;
 margin-top: 0.5rem;
 }
 
+.wireframe img{
+    max-width: 70%;    
+    height: auto;
+    padding: 2rem;
+}
+
+.logo img {
+width: 50%;
+height: auto;   
+}
+
 
 main {
 padding: 2rem;

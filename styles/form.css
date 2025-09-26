@@ -1,0 +1,142 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem 2%;
+    color: #fff;
+    background-color: #253844;
+}
+header h1 {margin: 0;}
+header h2 {margin: 0; font-weight: normal;}
+/*----------- NAVIGATION --------------*/
+
+#course-title {
+    display: block;
+    margin: 1rem;
+    text-align: center;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--accent1);
+}
+
+/*----------- MAIN --------------*/
+main {
+    padding: 0 2%;
+    min-height: 20rem;
+    border: 1px solid #253844;
+    border-radius: 6px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #ecf0f5;
+}
+
+/*----------- FORM STYLING --------------*/
+
+.wf1 label {
+    display: block;
+    padding: 1rem;
+    color: #253844;
+    font-size: .9rem;
+}
+
+.wf1 div {
+    padding-top: 1rem;
+    color: #445ba9;
+    font-size: .9rem;
+    padding-left: 1rem;
+}
+.wf1 input[type="text"],
+.wf1 input[type="tel"],
+.wf1 input[type="email"],
+.wf1 input[type="url"],
+.wf1 input[type="date"],
+.wf1 select,
+.wf1 textarea,
+.wf1 input[type="number"]
+{
+    background-color: #ffffff;
+    display: block;
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 400px;
+    appearance: none;
+}
+
+.wf1 input[type="radio"],
+.wf1 input[type="checkbox"] 
+{
+    margin-right: 6px;
+}
+.rating {
+  display: flex;
+  justify-content: left;   /* centers all rating options horizontally */                /* space between each group */
+  padding: 1rem;
+  margin-bottom: -1rem;
+  margin-top: -2rem;
+}
+
+.rating label {
+  display: flex;
+  flex-direction: column;    /* stack star above radio */
+  align-items: center;       /* center star and radio */
+  font-size: 1rem;         /* bigger stars */
+  cursor: pointer;
+  color: #999;
+}
+
+.la {
+    margin-bottom: -3rem;
+}
+.wf1 input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(#9c2c13, #6f200e);
+    color: #fff;
+    border-radius: 6px;
+    padding: .8rem;
+    width:98%;
+    max-width: 400px;
+    margin: 1rem 2% 1rem 2%;
+    box-shadow: 1px 1px 4px #999;
+}
+
+/*----------- FOOTER --------------*/
+footer {
+    background-color: #ddd;
+    padding: .5rem 2%;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 64rem) {
+
+    header, nav, main, footer {
+        max-width: 64rem;
+        margin:auto;
+    }
+
+    main {
+        padding: 0 2%;
+        min-height: 20rem;
+        border: 1px solid #4b0e0e;
+        border-radius: 6px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        /* background-color: #555; */
+
+    }
+}

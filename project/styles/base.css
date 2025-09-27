@@ -2,7 +2,7 @@
 
 /* Root Library */
 :root {
-    --nav: #000000;
+    --nav: #16320D;
     --header: #191f23;
     --accent1: #6484ab;
     --accent: #FFB020;
@@ -25,6 +25,15 @@
     box-sizing: border-box;
 }
 
+
+.content {
+    display: block;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
 /* Body */
 
 body {
@@ -40,7 +49,7 @@ body {
 .hero {
   width: 100%;
   height: 100vh;
-  background: url("../images/img/hero3.jpg") no-repeat center center;
+  background: url("../images/img/hero1.jpg") no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -48,6 +57,69 @@ body {
   text-align: center;
   color: white;
 }
+
+.header-flex {
+    display: flex;
+    background-color: var(--nav);
+    padding-left: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    color:#E0DED1;
+    font-size: 1.7rem;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    color: white;
+}
+
+#menu::before {
+    content: "≡";
+    font-weight: lighter;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
+    text-decoration: none;
+    color: var(--link);
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+    /* border-bottom: 2px solid rgba(255, 255, 255, .08); */
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    color: var(--link-hover);
+    outline: none;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
 
 @media (min-width: 1200px) {
     #hero-img {

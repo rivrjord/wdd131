@@ -4,12 +4,10 @@
 :root {
     --nav: #16320D;
     --header: #191f23;
-    --accent1: #6484ab;
-    --accent: #FFB020;
-    --bg: #253844;
-    --card1: #6e6a6a;
-    --card2: #242323;
+    --secondary: #E0DED1;
+    --accent:#A68D4A;
     --ink: #ffffff;
+    --ink2: black;
     --muted: wheat;
     --border: #E1E7EF;
     --radius: 12px;
@@ -24,6 +22,10 @@
 
 * {
     box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 
@@ -126,35 +128,217 @@ h1 {
     content: "X";
 }
 
+p {
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+h1, h2, h3 {
+    margin-top: 0;
+    font-weight: 900;
+    color: var(--ink2);
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../images/img/hero1.jpg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* Gradient overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7) 20%,  /* dark on left side */
+    rgba(0, 0, 0, 0.3) 60%,  /* fade toward middle */
+    rgba(0, 0, 0, 0) 100%    /* transparent on right */
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Make sure hero content stays on top */
+.hero-text,
+.social-icons {
+  position: relative;
+  z-index: 2;
+}
+
+
+.hero-text {
+  text-align: center;
+  max-width: 500px;
+  margin-bottom: 1.5rem; /* space above icons */
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-icons a {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: white;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background-color: var(--link-hover);
+  color: var(--ink2);
+  transform: translateY(-3px);
+}
+
+.dream {
+    font-size: 3rem;
+    font-weight: lighter;
+    line-height: 0.5;
+}
+
+.nigeria {
+    font-size: 4rem;
+    color: color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text h1 {
+  margin: 0; /* remove all default margins */
+  line-height: 0.9; /* keep text close together */
+}
+.explore-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.75rem;
+  color: black;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.explore-button:hover {
+  background: var(--accent);
+  color: #000;
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
 
 @media (min-width: 1200px) {
-    #hero-img {
-        height: 50vh;  /* shorter height on small screens */
+    
+    #menu {
+        display: none;
     }
 
 
+    p {
+    padding-left: 0;
+    padding-right: 0;
+}
+    h1, h2, h3 {
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
 /* Header */
 
+    .header-flex {
+        background-color: transparent;
+        gap: 1rem;
+    }
 
-    .navigation {
-        background: var(--nav);
-        border-top: 1px solid rgba(255, 255, 255, .08);
+    body, ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 58px;
+        padding: 1rem 3rem;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        background: color-mix(in srgb, var(--nav) 70%, transparent); 
+        z-index: 10;
+
+    }
+    .hero-text {
+        text-align: left;
+        max-width: 500px;
+        margin-bottom: 1.5rem; /* space above icons */
+}
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        height: auto;
+        width: auto;
+        padding-left: 22rem;
+    }
+
+    .navigation li {
+        display: inline-block;
     }
 
     .navigation ul {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
         list-style: none;
         margin: 0 auto;
         padding: 0;
-        max-width: var(--maxw);
-        align-items: center;
-        justify-content: center;
-        gap: 5rem;
-        flex-wrap: wrap;
     }
 
     .navigation a {
@@ -175,30 +359,53 @@ h1 {
         outline: none;
     }
 
+    .hero {
+    position: relative;
+    justify-content: flex-end; /* push content to bottom */
+    align-items: flex-start;   /* align to the left */
+    padding: 4rem 4rem;   
+    padding-top: 4rem;     /* add space from edges */
+    text-align: left;
+  }
+
+    .hero-actions {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .hero-text {
+        margin-bottom: 1rem; /* small gap before icons */
+    }
+
+    .hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+    .social-icons {
+        justify-content: flex-start;
+        margin-top: 1rem;
+    }
 
     /* Main */
 
-
-    .card-title {
-        margin: 0;
-        padding: .75rem 1rem;
-        background: var(--header);
-        color: #fff;
-        font-size: 1.1rem;
-        font-weight: 900;
-        border-bottom: 1px solid var(--border);
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .card1 {
-        background: var(--card1);
+    .card {
+        background: var(--secondary);
         /* border: 1px solid var(--border); */
-        border-radius: var(--radius);
+        /* border-radius: var(--radius); */
         box-shadow: var(--shadow);
         overflow: hidden;
+    }
+
+    .card-content {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: space-around;
+        justify-items: center;
+        padding: 4rem;
+        text-align: left;
     }
 
     .card2 {
@@ -219,7 +426,6 @@ h1 {
         gap: 1rem;
         padding: 1rem;
     }
-
 
     .subheading {
         margin: 1rem 0 .5rem;
@@ -338,12 +544,6 @@ h1 {
         font-weight: 300;
         letter-spacing: .2px;
     }
-
-
-
-
-
-
 
     .social-icons{
         margin: 20px 0;

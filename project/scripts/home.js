@@ -58,47 +58,61 @@ window.onload = () => {
     startRotation();
 };
 
-// Pause on hover
+// Pause on hover (safe check)
 const destinationSection = document.querySelector('.destination');
-destinationSection.addEventListener('mouseenter', stopRotation);
-destinationSection.addEventListener('mouseleave', startRotation);
-
-
+if (destinationSection) {
+    destinationSection.addEventListener('mouseenter', stopRotation);
+    destinationSection.addEventListener('mouseleave', startRotation);
+}
+// Festival Data
 const festivalPlaces = [
     {
-        image: 'images/chicago-temple.webp', 
         title: 'Argungu Fishing Festival',
         description: 'Experience the vibrant Argungu Fishing Festival, a celebration of culture and tradition in Kebbi State.',
-        link: 'argungu-festival.html'
+        link: 'argungu-festival.html',
+        date: 'March 2025',
+        city: 'Argungu, Kebbi State'
     },
     {
-        image: 'images/billings-montana-temple.webp',
         title: 'Osun-Osogbo Festival',
         description: 'Join the Osun-Osogbo Festival, a sacred event honoring the river goddess Osun in Osogbo, Osun State.',
-        link: 'osun-osogbo-festival.html'
+        link: 'osun-osogbo-festival.html',
+        date: 'August 2025',
+        city: 'Osogbo, Osun State'
     },
     { 
-        image: 'images/lima-peru-temple.webp',
         title: 'Eyo Festival',
         description: 'Witness the colorful Eyo Festival, a traditional Yoruba festival held in Lagos to honor the departed souls of Lagosians.',
-        link: 'eyo-festival.html'
+        link: 'eyo-festival.html',
+        date: 'May 2025',
+        city: 'Lagos, Lagos State'
     }
 ];
 
-createFestivalCard(festivalPlaces);
-
-// Function to create and display festival cards
+// ✅ Function to create and display festival cards
 function createFestivalCard(festivals) {
-    const festivalContainer = document.querySelector('.festivals');
+    const festivalContainer = document.querySelector('.festival-cards'); // Must match your HTML
+
+    if (!festivalContainer) {
+        console.error('Festival container not found!');
+        return;
+    }
+
     festivals.forEach(festival => {
         const card = document.createElement('div');
-        card.className = 'festival-card';  
+        card.className = 'festival-card';
         card.innerHTML = `
-            <img src="${festival.image}" alt="${festival.title}">
             <h3>${festival.title}</h3>
             <p>${festival.description}</p>
+            <p><strong>Date:</strong> ${festival.date}</p>
+            <p><strong>Location:</strong> ${festival.city}</p>
             <a href="${festival.link}">Learn More</a>
         `;
         festivalContainer.appendChild(card);
     });
 }
+
+// Run after page load
+window.addEventListener('DOMContentLoaded', () => {
+    createFestivalCard(festivalPlaces);
+});

@@ -188,6 +188,9 @@ h1, h2, h3 {
   margin-bottom: 1.5rem; /* space above icons */
 }
 
+.hero-text p {
+    font-size: 1rem;
+}
 .hero-actions {
   display: flex;
   flex-direction: column;
@@ -272,7 +275,6 @@ h1, h2, h3 {
 .card2 {
   background-color: var(--secondary);
   box-shadow: var(--shadow);
-  border-radius: var(--radius);
   overflow: hidden;
 }
 
@@ -409,9 +411,9 @@ h1, h2, h3 {
     }
 
     .hero-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
     .social-icons {
@@ -427,6 +429,9 @@ h1, h2, h3 {
         /* border-radius: var(--radius); */
         box-shadow: var(--shadow);
         overflow: hidden;
+    }
+    .card-content img {
+        border-radius: 0;
     }
 
     .card-content {

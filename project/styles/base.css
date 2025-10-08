@@ -44,7 +44,7 @@ body {
     margin: 0;
     padding: 0;
     margin-bottom: 1rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     /* color: var(--ink); */
     /* background: var(--bg); */
     line-height: 1.6;
@@ -143,6 +143,18 @@ h1, h2, h3 {
 
 }
 
+header {
+  position: fixed;      /* keeps it on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.hero {
+  margin-top: 60px;     /* offsets for fixed header height */
+  padding-top: 0;       /* remove internal space at the top */
+}
 
 .hero {
   position: relative;
@@ -180,7 +192,6 @@ h1, h2, h3 {
   position: relative;
   z-index: 2;
 }
-
 
 .hero-text {
   text-align: center;

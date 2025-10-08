@@ -1,24 +1,24 @@
 const destinationPlaces = [
     {
-        image: 'images/aba-nigeria-temple.webp',
+        image: 'images/img/obudu.jpg',
         title: 'Obudu Mountain Resort',
         description: 'Experience the breathtaking beauty of Obudu Mountain Resort, a perfect blend of nature and adventure.',
         link: 'obudu.html'
     },
     {
-        image: 'images/manti-temple.webp',
+        image: 'images/img/aso-rock.jpg',
         title: 'Aso Rock',
         description: 'Discover the iconic Aso Rock, a symbol of Nigeria\'s rich history and culture, located in the heart of Abuja.',
         link: 'aso-rock.html'
     },
     { 
-        image: 'images/washington-dc-temple.webp',
+        image: 'images/img/lekki-conservation-centre.jpg',
         title: 'Lekki Conservation Center',
         description: 'Explore the lush greenery and diverse wildlife at Lekki Conservation Center, a haven for nature lovers in Lagos.',
         link: 'lekki-conservation-center.html'
     },
     { 
-        image: 'images/rome-temple.webp',
+        image: 'images/img/agbokim.jpg',
         title: 'Agbokim Waterfalls',
         description: 'Witness the stunning Agbokim Waterfalls, a series of cascading falls surrounded by tropical rainforest in Cross River State.',
         link: 'agbokim-waterfalls.html'

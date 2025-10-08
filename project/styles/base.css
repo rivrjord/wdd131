@@ -1,5 +1,4 @@
 
-
 /* Root Library */
 :root {
     --nav: #16320D;
@@ -66,14 +65,29 @@ h1 {
   color: white;
 }
 
+/* 🌫️ Glassmorphism Navbar */
+.header-bar {
+  background: rgba(22, 50, 13, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  z-index: 20;
+}
+
+/* Header Flex */
 .header-flex {
     display: flex;
-    background-color: var(--nav);
-    padding-left: 0.5rem;
     justify-content: space-between;
     align-items: center;
-    color:#E0DED1;
-    font-size: 1.7rem;
+    color: var(--secondary);
+    font-size: 1.1rem;
+    padding: 0 1rem;
 }
 
 #menu {
@@ -319,7 +333,579 @@ header {
 
 .festival-card {
     background: #fff;
-    border-radius: 12px;
+    /* border-radius: 12px; */
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    height: 350px; /* fixed equal height */
+}
+
+.festival-card p{
+    font-size: 1rem;
+}
+
+.festival-card h3 {
+    font-size: 1.1rem; /* smaller font */
+    /* margin-bottom: 0.6rem; */
+    color: #0E2D4D;
+}
+
+.festival-card .description {
+    flex-grow: 1;
+    color: #333;
+    font-size: 0.9rem; /* smaller font */
+    line-height: 1.4;
+    /* margin-bottom: 0.75rem; */
+}
+
+.festival-card .details {
+    font-size: 0.85rem; /* smaller font */
+    /* margin-bottom: 0.4rem; */
+    color: #555;
+}
+
+.festival-card .learn-more {
+    align-self: flex-start;
+    background-color: #57A4E3;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem; /* smaller button text */
+    transition: background-color 0.3s ease;
+}
+
+.festival-card .learn-more:hover {
+    background-color: #0E2D4D;
+}
+
+
+@media (min-width: 1200px) {
+    
+    #menu {
+        display: none;
+    }
+
+
+    p {
+    padding-left: 0;
+    padding-right: 0;
+}
+    h1, h2, h3 {
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+/* Header */
+
+    .header-flex {
+        background-color: transparent;
+        gap: 1rem;
+    }
+
+    body, ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-bar {
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: color-mix(in srgb, var(--nav) 70%, transparent); 
+        z-index: 10;
+
+    }
+    .hero-text {
+        text-align: left;
+        max-width: 500px;
+        margin-bottom: 1.5rem; /* space above icons */
+}
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        height: auto;
+        width: auto;
+        padding-left: 22rem;
+    }
+
+    .navigation li {
+        display: inline-block;
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .navigation a {
+        color: #E6EEF7;
+        text-decoration: none;
+        font-weight: 500;
+        line-height: 1;
+        padding: .25rem .25rem;
+        border-bottom: 2px solid transparent;
+        transition: border-color .15s ease, color .15s ease, transform .15s ease;
+    }
+
+    .navigation a:hover {
+        font-weight: 800;
+        color: var(--accent);
+        border-color: var(--accent);
+        transform: translateY(-1px);
+        outline: none;
+    }
+
+    .hero {
+    position: relative;
+    justify-content: flex-end; /* push content to bottom */
+    align-items: flex-start;   /* align to the left */
+    padding: 4rem 4rem;   
+    padding-top: 4rem;     /* add space from edges */
+    text-align: left;
+  }
+
+    .hero-actions {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .hero-text {
+        margin-bottom: 1rem; /* small gap before icons */
+    }
+
+    .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+    .social-icons {
+        justify-content: flex-start;
+        margin-top: 1rem;
+    }
+
+    /* Main */
+
+    .card {
+        background: var(--secondary);
+        /* border: 1px solid var(--border); */
+        /* border-radius: var(--radius); */
+        box-shadow: var(--shadow);
+        overflow: hidden;
+    }
+    .card-content img {
+        border-radius: 0;
+    }
+
+    .card-content {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: space-around;
+        justify-items: center;
+        padding: 4rem;
+        text-align: left;
+        border-radius: 1px;
+    }
+
+    .subheading {
+        margin: 1rem 0 .5rem;
+        font-size: 1.05rem;
+        font-weight: 900;
+        color: wheat;
+        position: relative;
+    }
+
+    .subheading::after {
+        content: "";
+        display: block;
+        height: 2px;
+        background: var(--border);
+        margin-top: .5rem;
+    }
+
+    .about-text>p,
+    .place p {
+        text-align: justify;
+        text-align-last: left;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+    }
+
+    .about-photo img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 8px;
+        display: block;
+    }
+
+
+    .links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: .75rem 1.25rem;
+        list-style: none;
+        
+        padding: 1rem 1.25rem 1.25rem;
+        margin: 0;
+    }
+
+
+    .links li {
+        margin: .6rem 0;
+        list-style-type: disc;
+    }
+
+    .links a {
+        color: var(--link);
+        text-decoration: underline;
+        font-weight: 700;
+    }
+
+    .links a:hover,
+    .links a:focus {
+        color: var(--link-hover);
+        outline: none;
+    }
+
+    .place .nigeria {
+        float: left;
+        width: min(280px, 45%);
+        margin: 0 1rem .5rem 0;
+        text-align: left;
+    }
+
+    .place::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .place p {
+        max-width: 70ch;
+        margin: 1rem 0 0;
+    }
+
+    .nigeria img {
+        display: block;
+        width: 100%;
+        height: auto;
+        /* border: 1px solid var(--border); */
+        border-radius: 6px;
+    }
+
+    .nigeria figcaption {
+        margin-top: .4rem;
+        font-size: .9rem;
+        color: var(--muted);
+        margin-top: .5rem;
+    }
+
+
+    .footer {
+        background: var(--nav);
+        color: #E6EEF7;
+        text-align: center;
+        padding: 1rem .75rem .5rem;
+        border-top: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .footer p {
+        margin: .25rem 0;
+    }
+
+    .footer .dot {
+        margin: 0 .35rem;
+    }
+
+    .lastmod {
+        color: var(--accent);
+        font-weight: 300;
+        letter-spacing: .2px;
+    }
+
+    .social-icons{
+        margin: 20px 0;
+    }
+
+    .social-icons a{
+        border: 1px solid #ccc;
+        border-radius: 20%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 3px;
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    color: white;
+}
+
+#menu::before {
+    content: "≡";
+    font-weight: lighter;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
+    text-decoration: none;
+    color: var(--link);
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+    /* border-bottom: 2px solid rgba(255, 255, 255, .08); */
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    color: var(--link-hover);
+    outline: none;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+p {
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+h1, h2, h3 {
+    margin-top: 0;
+    font-weight: 900;
+    color: var(--ink2);
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+header {
+  position: fixed;      /* keeps it on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.hero {
+  margin-top: 60px;     /* offsets for fixed header height */
+  padding-top: 0;       /* remove internal space at the top */
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../images/img/hero1.jpg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* Gradient overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7) 20%,  /* dark on left side */
+    rgba(0, 0, 0, 0.3) 60%,  /* fade toward middle */
+    rgba(0, 0, 0, 0) 100%    /* transparent on right */
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Make sure hero content stays on top */
+.hero-text,
+.social-icons {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  text-align: center;
+  max-width: 500px;
+  margin-bottom: 1.5rem; /* space above icons */
+}
+
+.info {
+    font-size: 1rem;
+}
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-icons a {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: white;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background-color: var(--link-hover);
+  color: var(--ink2);
+  transform: translateY(-3px);
+}
+
+.dream {
+    font-size: 3rem;
+    font-weight: lighter;
+    line-height: 0.5;
+}
+
+.nigeria {
+    font-size: 4rem;
+    color: color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text h1 {
+  margin: 0; /* remove all default margins */
+  line-height: 0.9; /* keep text close together */
+}
+.explore-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.75rem;
+  color: black;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.explore-button:hover {
+  background: var(--accent);
+  color: #000;
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+.card,
+.card2 {
+  background-color: var(--secondary);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card img {
+    width: auto;
+    height: 200px;
+}
+
+.card-content {
+    flex-direction: column;      /* Stack elements vertically */
+    align-items: center;         /* Center content horizontally */
+    text-align: center;          /* Center text */
+    padding: 2rem;               /* Reduce padding for smaller screens */
+}
+
+  .card-content img {
+  width: 100%;
+  height: auto;               /* keep natural proportions */
+  max-height: 300px;          /* limit the height */
+  object-fit: cover;          /* crop if necessary */
+  border-radius: var(--radius);
+  display: block;
+}
+.festival-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* wider cards */
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.festival-card {
+    background: #fff;
+    /* border-radius: 12px; */
     padding: 1.25rem 1.5rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     display: flex;

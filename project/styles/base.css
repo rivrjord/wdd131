@@ -302,7 +302,7 @@ header {
 
 .nigeria {
     font-size: 4rem;
-    color: color-mix(in srgb, var(--accent) 60%, transparent);
+    color: var(--accent);
 }
 
 

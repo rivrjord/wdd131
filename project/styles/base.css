@@ -1,3 +1,9 @@
+/*
+|--------------------------------------------------------------------------
+| 1. Root Variables
+|--------------------------------------------------------------------------
+| Defines all CSS custom properties for colors, fonts, spacing, etc.
+*/
 
 /* Root Library */
 :root {
@@ -19,101 +25,96 @@
     --focus: #FFB020;
 }
 
+/*
+|--------------------------------------------------------------------------
+| 2. Base & Typography
+|--------------------------------------------------------------------------
+| General element styling (body, headings, paragraphs, box-sizing).
+*/
+
 * {
     box-sizing: border-box;
 }
 
 html, body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
-
-
 /* Body */
-
 body {
     font-family: var(--font-body);
     margin: 0;
     padding: 0;
     margin-bottom: 1rem;
-    /* margin-top: 1rem; */
-    /* color: var(--ink); */
-    /* background: var(--bg); */
     line-height: 1.6;
 }
 
 h1 {
     font-family: var(--font-heading);
-}   
+}    
 
-
+/* Common Heading Styles */
 h1, h2, h3 {
     margin-top: 0;
     font-weight: 900;
     color: var(--ink2);
+    /* Mobile/Default Padding */
     padding-left: 2rem;
     padding-right: 2rem;
-
 }
 
+/* Common Paragraph Styles */
 p {
     margin: 0 0 1rem 0;
     font-size: 1.3rem;
+    /* Mobile/Default Padding */
     padding-left: 2rem;
     padding-right: 2rem;
 }
 
 
-/* 🌫️ Glassmorphism Navbar */
-.header-bar {
-  background: rgba(22, 50, 13, 0.3);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 60px;
-  width: 100%;
-  z-index: 20;
+/*
+|--------------------------------------------------------------------------
+| 3. Header & Navigation (Mobile First)
+|--------------------------------------------------------------------------
+| Styles for the fixed header, navbar, and mobile menu.
+*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
 }
 
-/* Header Flex */
+/* Glassmorphism Navbar */
+.header-bar {
+    background: rgba(22, 50, 13, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    z-index: 20;
+}
+
+/* Header Flex (Mobile: logo/sitename close together, menu button pushed right) */
 .header-flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Keeps logo/sitename close */
     align-items: center;
     color: var(--secondary);
     font-size: 1.1rem;
     padding: 0 1rem;
+    gap: 0.5rem; /* Space between logo and sitename */
 }
 
-
-header {
-  position: fixed;      /* keeps it on top */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 20;
-}
-
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: url("../images/img/hero1.jpg") no-repeat center center/cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  padding: 2rem;
-  overflow: hidden;
-}
-
-
+/* Mobile Menu Button */
 #menu {
     display: block;
     font-size: 2rem;
@@ -121,53 +122,74 @@ header {
     text-decoration: none;
     padding: 0.29rem 0rem;
     color: white;
+    margin-left: auto; /* Pushes button to the far right */
 }
 
 #menu::before {
     content: "≡";
     font-weight: lighter;
 }
-/* Mobile Dropdown Menu */
+
+#menu.show::before {
+    content: "X";
+}
+
+/* Mobile Dropdown Menu Container */
 .navigation {
     display: flex;
     flex-direction: column;
-    align-items: center;   /* centers items horizontally */
+    align-items: center;
     justify-content: center;
     list-style: none;
     margin: 0 auto;
     max-width: 760px;
-    background-color: rgba(22, 50, 13, 0.95); /* semi-transparent dark background */
-
+    background-color: rgba(22, 50, 13, 0.95);
     overflow: hidden;
-    max-height: 0;      /* collapsed */
+    max-height: 0;
     opacity: 0;
     transform: translateY(-20px);
     transition: max-height 0.6s ease, opacity 0.4s ease, transform 0.4s ease;
-    text-align: center; /* ensures text inside <a> is centered */
+    text-align: center;
 }
 
-/* When menu is active */
-.navigation.show {
-    max-height: 500px; /* enough height for items */
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Individual links */
+/* Menu items (Mobile) */
 .navigation li {
-    display: block;
-    width: 100%;           /* makes <a> take full width for easy centering */
+    display: none; /* Default hidden state */
+    width: 100%;
     opacity: 0;
     transform: translateY(10px);
     animation: fadeInUp 0.4s forwards;
 }
 
-/* Center links text */
-.navigation li a {
+/* When menu is active */
+.navigation.show {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.show li {
+    display: block; /* Show item when menu is active */
+}
+
+/* Individual links */
+.navigation a {
     display: block;
     width: 100%;
-    text-align: center;     /* center text inside link */
+    text-align: center; /* Centralized on smaller screen */
     padding: 0.75rem;
+    text-decoration: none;
+    color: var(--link);
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    color: var(--link-hover);
+    outline: none;
+    text-decoration: underline;
 }
 
 /* Cascading animation for each li */
@@ -184,114 +206,61 @@ header {
 }
 
 
-.navigation li {
-    display: none;
-}
+/*
+|--------------------------------------------------------------------------
+| 4. Hero Section
+|--------------------------------------------------------------------------
+| Styles for the main header image and introductory text/actions.
+*/
 
-.navigation a {
-    display: block;
-    padding: 0.75rem;
-    text-align: left;
-    text-decoration: none;
-    color: var(--link);
-    font-weight: 700;
-    transition: 0.5s;
-    font-size: clamp(1rem, 2vmin, 1.5rem);
-    /* border-bottom: 2px solid rgba(255, 255, 255, .08); */
-}
-
-.navigation a:hover,
-.navigation a:focus {
-    color: var(--link-hover);
-    outline: none;
-    text-decoration: underline;
-    /* font-weight: 900; */
-}
-
-
-.show li {
-    display: block;
-}
-
-#menu.show::before {
-    content: "X";
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("../images/img/hero1.jpg") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    overflow: hidden;
 }
 
 /* Gradient overlay */
 .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.7) 20%,  /* dark on left side */
-    rgba(0, 0, 0, 0.3) 60%,  /* fade toward middle */
-    rgba(0, 0, 0, 0) 100%    /* transparent on right */
-  );
-  z-index: 1;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.7) 20%,
+        rgba(0, 0, 0, 0.3) 60%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* Make sure hero content stays on top */
 .hero-text,
 .social-icons {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-text {
-  text-align: center;
-  max-width: 500px;
-  margin-bottom: 1.5rem; /* space above icons */
-  display: flex;
-  flex-direction: column;
+    text-align: center;
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-text h1 {
-  margin: 0; /* remove all default margins */
-  line-height: 0.9; /* keep text close together */
-}
-
-.info {
-    font-size: 0.85rem; /* smaller text */
-    line-height: 1.5;
-    max-width: 480px;   /* keeps text nicely readable */
-    color: #f0f0f0;     /* soft white for clarity */
-}
-.hero-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-
-.social-icons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.social-icons a {
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  color: white;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.social-icons a:hover {
-  background-color: var(--link-hover);
-  color: var(--ink2);
-  transform: translateY(-3px);
-  border: none;
+    margin: 0;
+    line-height: 0.9;
 }
 
 .dream {
@@ -305,37 +274,87 @@ header {
     color: var(--accent);
 }
 
+.info {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    max-width: 480px;
+    color: #f0f0f0;
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
 
 .explore-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.75rem 1.75rem;
-  color: black;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 2;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem 1.75rem;
+    color: black;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
 
 .explore-button:hover {
-  background: var(--focus);
-  color: #000;
-  border: none;
-  transform: translateY(-2px);
+    background: var(--focus);
+    color: #000;
+    border: none;
+    transform: translateY(-2px);
 }
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-icons a {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background-color: var(--link-hover);
+    color: var(--ink2);
+    transform: translateY(-3px);
+    border: none;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 5. Main Content Components (Cards & Festivals)
+|--------------------------------------------------------------------------
+| Styles for the card components and the festival section layout.
+*/
 
 .card,
 .card2 {
-  background-color: var(--secondary);
-  box-shadow: var(--shadow);
-  overflow: hidden;
+    background-color: var(--secondary);
+    box-shadow: var(--shadow);
+    overflow: hidden;
 }
 
 .card img {
@@ -344,26 +363,26 @@ header {
 }
 
 .card-content {
-    flex-direction: column;      /* Stack elements vertically */
-    align-items: center;         /* Center content horizontally */
-    text-align: center;          /* Center text */
-    padding: 2rem;               /* Reduce padding for smaller screens */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
 }
 
 .card-content img {
     width: 100%;
-    height: auto;               /* keep natural proportions */
-    max-height: 300px;          /* limit the height */
-    object-fit: cover;          /* crop if necessary */
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
     border-radius: var(--radius);
     display: block;
 }
 
 .festivals {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .festivals h2 {
@@ -372,48 +391,50 @@ header {
 
 .festival-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* wider cards */
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 0.5rem;
     justify-content: center;
     padding: 1rem;
     padding-left: 4rem;
     padding-right: 4rem;
 }
+
 .festival-card {
-    background: transparent;              /* no fill */
-    border: 1px solid #5d646b;            /* solid visible frame (use your theme color) */
-    border-radius: 12px;                  /* optional: rounded corners */
+    background: transparent;
+    border: 1px solid #5d646b;
+    border-radius: 12px;
     padding: 1.25rem 1.5rem;
-    box-shadow: none;                     /* remove shadow if you want only the frame */
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: left;
-    height: 350px;                        /* fixed equal height */
+    height: 350px;
 }
 
 
 .festival-card p{
     font-size: 1rem;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .festival-card h3 {
-    font-size: 1.1rem; /* smaller font */
-    /* margin-bottom: 0.6rem; */
+    font-size: 1.1rem;
     color: var(--nav);
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .festival-card .description {
     flex-grow: 1;
     color: #333;
-    font-size: 0.9rem; /* smaller font */
+    font-size: 0.9rem;
     line-height: 1.4;
-    /* margin-bottom: 0.75rem; */
 }
 
 .festival-card .details {
-    font-size: 0.85rem; /* smaller font */
-    /* margin-bottom: 0.4rem; */
+    font-size: 0.85rem;
     color: #555;
 }
 
@@ -424,7 +445,7 @@ header {
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 6px;
-    font-size: 0.85rem; /* smaller button text */
+    font-size: 0.85rem;
     transition: background-color 0.3s ease;
 }
 
@@ -433,80 +454,99 @@ header {
 }
 
 
+/*
+|--------------------------------------------------------------------------
+| 6. Footer
+|--------------------------------------------------------------------------
+| Styles for the main footer section.
+*/
+
 footer {
-  background: var(--nav); /* glassy navy tone */
-  backdrop-filter: blur(6px);
-  color: black;
-  padding: 3rem 1.5rem;
-  text-align: center;
-  position: relative;
-  margin-top: 4rem;
+    background: var(--nav);
+    backdrop-filter: blur(6px);
+    color: black;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    position: relative;
+    margin-top: 4rem;
 }
 
 footer .footer-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
 footer .footer-column {
-  flex: 1 1 250px;
-  min-width: 200px;
+    flex: 1 1 250px;
+    min-width: 200px;
 }
 
 footer h3 {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: var(--secondary); /* light blue accent */
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding-left: 0;
+    padding-right: 0;
 }
+
 footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center; /* centers the links */
-  flex-wrap: wrap;          /* keeps it responsive */
-  gap: 1.5rem;              /* spacing between links */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
 footer ul li {
-  display: inline-block;
+    display: inline-block;
 }
 
 footer ul li a {
-  color: #e6e6e6;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
+    color: #e6e6e6;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
 }
 
 footer ul li a:hover {
-  color: var(--secondary); /* light blue accent */
+    color: var(--secondary);
 }
 
 footer nav {
-    padding-bottom: 1rem; /* reduce space below logo */
-  border-bottom: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 footer nav img {
-  margin-bottom: 0.3rem; /* minimal space under logo */
-  width: 70px; /* optional: smaller logo for balance */
-  height: auto;
+    margin-bottom: 0.3rem;
+    width: 70px;
+    height: auto;
 }
 
+
+/*
+|--------------------------------------------------------------------------
+| 7. Media Queries (Desktop)
+|--------------------------------------------------------------------------
+| Styles applied for screen widths of 1200px and greater.
+*/
+
 @media (min-width: 1200px) {
-    
+
+      
     #menu {
         display: none;
     }
@@ -787,5 +827,4 @@ footer nav img {
         width: 40px;
         height: 40px;
     }
-
 }

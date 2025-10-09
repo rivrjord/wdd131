@@ -87,7 +87,6 @@ p {
     color: var(--secondary);
     font-size: 1.1rem;
     padding: 0 1rem;
-    gap: 0.5rem;
 }
 
 
@@ -120,7 +119,7 @@ header {
     font-size: 2rem;
     font-weight: 700;
     text-decoration: none;
-    padding: 0.5rem 0.75rem;
+    padding: 0.29rem 0rem;
     color: white;
 }
 
@@ -138,6 +137,7 @@ header {
     margin: 0 auto;
     max-width: 760px;
     background-color: rgba(22, 50, 13, 0.95); /* semi-transparent dark background */
+
     overflow: hidden;
     max-height: 0;      /* collapsed */
     opacity: 0;
@@ -556,17 +556,21 @@ footer nav img {
 }
 
     .navigation {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: flex; /* horizontal row */
+        flex-direction: row;
         background: transparent;
-        height: auto;
-        width: auto;
-        padding-left: 22rem;
+        max-height: none;
+        opacity: 1;
+        transform: none;
+        gap: 2rem;
     }
 
     .navigation li {
-        display: inline-block;
+        display: inline-block !important; /* force display */
+    }
+
+    .navigation.show li {
+        display: inline-block; /* make sure .show doesn’t interfere */
     }
 
     .navigation ul {
@@ -590,10 +594,7 @@ footer nav img {
     }
 
     .navigation a:hover {
-        font-weight: 800;
         color: var(--accent);
-        border-color: var(--accent);
-        transform: translateY(-1px);
         outline: none;
     }
 

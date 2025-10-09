@@ -87,6 +87,7 @@ p {
     color: var(--secondary);
     font-size: 1.1rem;
     padding: 0 1rem;
+    gap: 0.5rem;
 }
 
 
@@ -130,7 +131,6 @@ header {
 /* Mobile Dropdown Menu */
 .navigation {
     display: flex;
-    padding-top: -10px;
     flex-direction: column;
     align-items: center;   /* centers items horizontally */
     justify-content: center;

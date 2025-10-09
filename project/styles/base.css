@@ -1285,3 +1285,324 @@ footer nav img {
         border-radius: var(--radius);
     }
 }
+
+
+/*
+|--------------------------------------------------------------------------
+| 4. Hero Section - TEAM & REFERENCES PAGE SPECIFIC STYLES
+|--------------------------------------------------------------------------
+*/
+.hero-team {
+    /* Use an image that suggests collaboration or a group */
+    background: url("../images/img/team-hero.jpg") no-repeat center center/cover;
+}
+
+.hero-references {
+    /* Use a simple, clean, or documentation-themed image */
+    background: url("../images/img/references-hero.jpg") no-repeat center center/cover;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 5. Main Content Components - TEAM & REFERENCES
+|--------------------------------------------------------------------------
+*/
+
+/* TEAM GRID STYLES */
+.team-grid-section {
+    padding: 4rem 1rem;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-grid-section h2 {
+    padding-left: 0; 
+    padding-right: 0;
+    margin-bottom: 2rem;
+    color: var(--nav);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.team-member-card {
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.team-member-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top center; /* Focus on face/shoulders */
+    display: block;
+}
+
+.team-member-card .card-info {
+    padding: 1rem 1.5rem 0;
+}
+
+.team-member-card h3 {
+    font-size: 1.5rem;
+    color: var(--nav);
+    margin-bottom: 0.25rem;
+    padding: 0;
+}
+
+.team-member-card h4 {
+    font-size: 0.95rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-weight: 500;
+    padding: 0;
+}
+
+.team-member-card p {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    padding: 0;
+}
+
+.member-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.member-social a {
+    color: var(--nav);
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.member-social a:hover {
+    color: var(--accent);
+}
+
+
+/* REFERENCES STYLES */
+.references-section {
+    padding: 4rem 1rem;
+    max-width: var(--maxw);
+    margin: 0 auto;
+}
+
+.references-section h2 {
+    padding-left: 0; 
+    padding-right: 0;
+    margin-bottom: 2rem;
+    color: var(--nav);
+    text-align: center;
+}
+
+.reference-category {
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.reference-category h3 {
+    color: var(--accent);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5rem;
+    padding-left: 0; 
+    padding-right: 0;
+}
+
+.reference-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reference-category li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    border-left: 3px solid var(--nav);
+    padding-left: 1rem;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 7. Media Queries (Desktop) - TEAM & REFERENCES OVERRIDES
+|--------------------------------------------------------------------------
+*/
+
+@media (min-width: 1200px) {
+    .team-grid-section {
+        padding: 6rem 4rem;
+        text-align: left;
+    }
+    .team-grid-section h2 {
+        text-align: left;
+    }
+
+    .references-section {
+        padding: 6rem 4rem;
+    }
+    .references-section h2 {
+        text-align: left;
+    }
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 8. Form Styles (New Section)
+|--------------------------------------------------------------------------
+*/
+
+.form-section {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.form-section h2, .form-section p {
+    text-align: center;
+    padding: 0; /* Remove base padding */
+}
+
+.form-section h2 {
+    color: var(--nav);
+    margin-bottom: 0.5rem;
+}
+
+.form-section p {
+    margin-bottom: 2rem;
+}
+
+.trip-inquiry-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--ink2);
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--ink2);
+    background-color: var(--ink); /* White background for inputs */
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--focus);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(166, 141, 74, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.trip-inquiry-form button[type="submit"] {
+    margin-top: 1rem;
+    width: 100%;
+    /* Reuses .explore-button styles, adding block formatting */
+}
+
+/* Newsletter Styles */
+.newsletter-section {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: var(--nav);
+    color: var(--secondary);
+    margin: 0 auto;
+}
+
+.newsletter-section h2, .newsletter-section p {
+    color: var(--secondary);
+    padding: 0;
+}
+
+.newsletter-input-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin: 1rem auto;
+    gap: 0.5rem;
+}
+
+.newsletter-input-group input {
+    background-color: white;
+    color: var(--ink2);
+    border: none;
+}
+
+.newsletter-input-group button {
+    /* Override explore button background for better contrast on dark background */
+    background-color: var(--accent); 
+    color: var(--ink);
+}
+
+.newsletter-input-group button:hover {
+    background-color: var(--link-hover);
+}
+
+
+/* Desktop Overrides for Form */
+@media (min-width: 768px) {
+    .trip-inquiry-form {
+        grid-template-columns: 1fr 1fr; /* Two columns for smaller inputs */
+    }
+    
+    .form-group.full-width {
+        grid-column: 1 / -1; /* Textarea spans both columns */
+    }
+
+    .trip-inquiry-form button[type="submit"] {
+        width: auto;
+        justify-self: center; /* Center the submit button */
+        grid-column: 1 / -1; 
+    }
+    
+    .newsletter-input-group {
+        flex-direction: row;
+    }
+    
+    .newsletter-input-group input {
+        flex-grow: 1;
+    }
+
+    .newsletter-input-group button {
+        width: 150px; /* Fixed width for button */
+    }
+}

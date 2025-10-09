@@ -240,6 +240,7 @@ header {
   background-color: var(--link-hover);
   color: var(--ink2);
   transform: translateY(-3px);
+  border: none;
 }
 
 .dream {
@@ -273,9 +274,9 @@ header {
 }
 
 .explore-button:hover {
-  background: var(--accent);
+  background: var(--focus);
   color: #000;
-  border-color: #fff;
+  border: none;
   transform: translateY(-2px);
 }
 
@@ -348,7 +349,7 @@ header {
 .festival-card h3 {
     font-size: 1.1rem; /* smaller font */
     /* margin-bottom: 0.6rem; */
-    color: #0E2D4D;
+    color: var(--nav);
 }
 
 .festival-card .description {
@@ -381,6 +382,77 @@ header {
 }
 
 
+footer {
+  background: var(--nav); /* glassy navy tone */
+  backdrop-filter: blur(6px);
+  color: black;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  position: relative;
+  margin-top: 4rem;
+}
+
+footer .footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+footer .footer-column {
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+footer h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--secondary); /* light blue accent */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* centers the links */
+  flex-wrap: wrap;          /* keeps it responsive */
+  gap: 1.5rem;              /* spacing between links */
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+footer ul li a {
+  color: #e6e6e6;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: var(--secondary); /* light blue accent */
+}
+
+footer nav {
+    padding-bottom: 1rem; /* reduce space below logo */
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+footer nav img {
+  margin-bottom: 0.3rem; /* minimal space under logo */
+  width: 70px; /* optional: smaller logo for balance */
+  height: auto;
+}
 @media (min-width: 1200px) {
     
     #menu {

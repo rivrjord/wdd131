@@ -116,3 +116,12 @@ function createFestivalCard(festivals) {
 window.addEventListener('DOMContentLoaded', () => {
     createFestivalCard(festivalPlaces);
 });
+
+
+const menuButton = document.querySelector('#menu');
+const nav = document.querySelector('.navigation');
+
+menuButton.addEventListener('click', () => {
+  menuButton.classList.toggle('show');
+  nav.classList.toggle('show');
+});

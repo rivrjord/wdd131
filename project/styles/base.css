@@ -537,6 +537,111 @@ footer nav img {
 }
 
 
+
+/*
+|--------------------------------------------------------------------------
+| 4. Hero Section - DESTINATION PAGE SPECIFIC STYLES
+|--------------------------------------------------------------------------
+*/
+
+.hero-destination {
+    /* Example: Use a different background image specific to destinations */
+    background: url("../images/img/destination-hero.jpg") no-repeat center center/cover;
+    /* Adjust background gradient for better readability if needed */
+    /* Remove or adjust if you add a specific image */
+}
+
+/*
+|--------------------------------------------------------------------------
+| 5. Main Content Components - DESTINATIONS GRID
+|--------------------------------------------------------------------------
+*/
+
+.destinations-grid-section {
+    padding: 4rem 1rem;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.destinations-grid-section h2 {
+    /* Mobile padding adjustment */
+    padding-left: 0; 
+    padding-right: 0;
+    margin-bottom: 2rem;
+    color: var(--nav);
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.destination-card {
+    background-color: var(--ink);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.destination-card .card-info {
+    padding: 1.5rem;
+}
+
+.destination-card h3 {
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    padding: 0; /* Remove padding inherited from h3 base styles */
+}
+
+.destination-card p {
+    font-size: 1rem;
+    color: var(--ink2);
+    margin-bottom: 1rem;
+    padding: 0; /* Remove padding inherited from p base styles */
+}
+
+.destination-card .learn-more {
+    display: inline-block;
+    color: var(--nav);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 2px;
+}
+
+.destination-card .learn-more:hover {
+    color: var(--link-hover);
+    border-color: var(--link-hover);
+}
+
+
+/* DESKTOP OVERRIDES */
+@media (min-width: 1200px) {
+    .destinations-grid-section {
+        padding: 6rem 4rem;
+    }
+    .destinations-grid-section h2 {
+        text-align: left;
+    }
+}
+
+
 /*
 |--------------------------------------------------------------------------
 | 7. Media Queries (Desktop)

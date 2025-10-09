@@ -537,111 +537,6 @@ footer nav img {
 }
 
 
-
-/*
-|--------------------------------------------------------------------------
-| 4. Hero Section - DESTINATION PAGE SPECIFIC STYLES
-|--------------------------------------------------------------------------
-*/
-
-.hero-destination {
-    /* Example: Use a different background image specific to destinations */
-    background: url("../images/img/destination-hero.jpg") no-repeat center center/cover;
-    /* Adjust background gradient for better readability if needed */
-    /* Remove or adjust if you add a specific image */
-}
-
-/*
-|--------------------------------------------------------------------------
-| 5. Main Content Components - DESTINATIONS GRID
-|--------------------------------------------------------------------------
-*/
-
-.destinations-grid-section {
-    padding: 4rem 1rem;
-    max-width: var(--maxw);
-    margin: 0 auto;
-    text-align: center;
-}
-
-.destinations-grid-section h2 {
-    /* Mobile padding adjustment */
-    padding-left: 0; 
-    padding-right: 0;
-    margin-bottom: 2rem;
-    color: var(--nav);
-}
-
-.destination-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.destination-card {
-    background-color: var(--ink);
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    text-align: left;
-    transition: transform 0.3s ease;
-}
-
-.destination-card:hover {
-    transform: translateY(-5px);
-}
-
-.destination-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-}
-
-.destination-card .card-info {
-    padding: 1.5rem;
-}
-
-.destination-card h3 {
-    font-size: 1.3rem;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-    padding: 0; /* Remove padding inherited from h3 base styles */
-}
-
-.destination-card p {
-    font-size: 1rem;
-    color: var(--ink2);
-    margin-bottom: 1rem;
-    padding: 0; /* Remove padding inherited from p base styles */
-}
-
-.destination-card .learn-more {
-    display: inline-block;
-    color: var(--nav);
-    text-decoration: none;
-    font-weight: 700;
-    border-bottom: 2px solid var(--accent);
-    padding-bottom: 2px;
-}
-
-.destination-card .learn-more:hover {
-    color: var(--link-hover);
-    border-color: var(--link-hover);
-}
-
-
-/* DESKTOP OVERRIDES */
-@media (min-width: 1200px) {
-    .destinations-grid-section {
-        padding: 6rem 4rem;
-    }
-    .destinations-grid-section h2 {
-        text-align: left;
-    }
-}
-
-
 /*
 |--------------------------------------------------------------------------
 | 7. Media Queries (Desktop)
@@ -931,5 +826,462 @@ footer nav img {
         margin: 0 3px;
         width: 40px;
         height: 40px;
+    }
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 4. Hero Section - DESTINATION PAGE SPECIFIC STYLES
+|--------------------------------------------------------------------------
+*/
+
+.hero-destination {
+    /* Example: Use a different background image specific to destinations */
+    background: url("../images/img/destination-hero.jpg") no-repeat center center/cover;
+    /* Adjust background gradient for better readability if needed */
+    /* Remove or adjust if you add a specific image */
+}
+
+/*
+|--------------------------------------------------------------------------
+| 5. Main Content Components - DESTINATIONS GRID
+|--------------------------------------------------------------------------
+*/
+
+.destinations-grid-section {
+    padding: 4rem 1rem;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.destinations-grid-section h2 {
+    /* Mobile padding adjustment */
+    padding-left: 0; 
+    padding-right: 0;
+    margin-bottom: 2rem;
+    color: var(--nav);
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.destination-card {
+    background-color: var(--ink);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.destination-card .card-info {
+    padding: 1.5rem;
+}
+
+.destination-card h3 {
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    padding: 0; /* Remove padding inherited from h3 base styles */
+}
+
+.destination-card p {
+    font-size: 1rem;
+    color: var(--ink2);
+    margin-bottom: 1rem;
+    padding: 0; /* Remove padding inherited from p base styles */
+}
+
+.destination-card .learn-more {
+    display: inline-block;
+    color: var(--nav);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 2px;
+}
+
+.destination-card .learn-more:hover {
+    color: var(--link-hover);
+    border-color: var(--link-hover);
+}
+
+
+/* DESKTOP OVERRIDES */
+@media (min-width: 1200px) {
+    .destinations-grid-section {
+        padding: 6rem 4rem;
+    }
+    .destinations-grid-section h2 {
+        text-align: left;
+    }
+}
+
+/*
+|--------------------------------------------------------------------------
+| 4. Hero Section - CULTURE PAGE SPECIFIC STYLES
+|--------------------------------------------------------------------------
+*/
+.hero-culture {
+    /* Use a background image relevant to culture (e.g., masks, fabrics, or a cultural event) */
+    background: url("../images/img/culture-hero.jpg") no-repeat center center/cover;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 5. Main Content Components - CULTURE TOPICS GRID
+|--------------------------------------------------------------------------
+*/
+
+.cultural-topics-grid {
+    padding: 4rem 1rem;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cultural-topics-grid h2,
+.ethnic-groups h2 {
+    /* Mobile padding adjustment */
+    padding-left: 0; 
+    padding-right: 0;
+    margin-bottom: 2rem;
+    color: var(--nav);
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.topic-card {
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+}
+
+.topic-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.topic-card .card-info {
+    padding: 1.25rem;
+}
+
+.topic-card h3 {
+    font-size: 1.15rem;
+    color: var(--nav);
+    margin-bottom: 0.5rem;
+    padding: 0; 
+}
+
+.topic-card p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 1rem;
+    padding: 0; 
+    line-height: 1.4;
+}
+
+.topic-card .learn-more {
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px dotted var(--accent);
+    padding-bottom: 2px;
+}
+
+.topic-card .learn-more:hover {
+    color: var(--link-hover);
+    border-color: var(--link-hover);
+}
+
+/* Ethnic Groups Section */
+.ethnic-groups {
+    padding: 2rem 0;
+    max-width: var(--maxw);
+    margin: 0 auto;
+}
+
+.ethnic-groups h2 {
+    text-align: center;
+}
+
+.culture-card {
+    /* Reuses .card styles */
+    margin: 2rem 1rem; /* Add margin for mobile separation */
+}
+
+/* Shared styles for .explore-button used in cards */
+.explore-button.small-button {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 7. Media Queries (Desktop) - CULTURE SPECIFIC OVERRIDES
+|--------------------------------------------------------------------------
+*/
+
+@media (min-width: 1200px) {
+
+    .cultural-topics-grid {
+        padding: 6rem 4rem 2rem;
+    }
+    
+    .cultural-topics-grid h2 {
+        text-align: left;
+    }
+
+    .ethnic-groups {
+        padding: 4rem;
+    }
+
+    .ethnic-groups h2 {
+        text-align: left;
+    }
+    
+    /* Reverse layout for alternate cards (Yoruba, Igbo, etc.) */
+    .culture-card .card-content {
+        /* Reset destination grid layout which was inherited */
+        display: flex; 
+        flex-direction: row; 
+        gap: 3rem;
+        padding: 3rem 4rem;
+    }
+    
+    .culture-card.reverse .card-content {
+        flex-direction: row-reverse;
+    }
+
+    .culture-text {
+        flex: 1;
+    }
+
+    .culture-image {
+        flex: 1;
+        max-width: 45%;
+    }
+    
+    .culture-image img {
+        border-radius: var(--radius);
+        max-height: 400px;
+    }
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 4. Hero Section - TRIP PAGE SPECIFIC STYLES
+|--------------------------------------------------------------------------
+*/
+.hero-trip {
+    /* Use a background image relevant to travel (e.g., airport, map, or good roads) */
+    background: url("../images/img/trip-hero.jpg") no-repeat center center/cover;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 5. Main Content Components - PLANNING GUIDE AND ITINERARIES
+|--------------------------------------------------------------------------
+*/
+
+.planning-guide-section {
+    padding: 4rem 1rem;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.planning-guide-section h2,
+.itinerary-section h2 {
+    /* Mobile padding adjustment */
+    padding-left: 0; 
+    padding-right: 0;
+    margin-bottom: 2rem;
+    color: var(--nav);
+    text-align: center;
+}
+
+.planning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.resource-card {
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+    padding: 2rem 1.5rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.resource-card i {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.resource-card h3 {
+    font-size: 1.1rem;
+    color: var(--nav);
+    margin-bottom: 0.5rem;
+    padding: 0; 
+}
+
+.resource-card p {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    padding: 0; 
+}
+
+.resource-card .resource-link {
+    display: inline-block;
+    color: var(--nav);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid var(--nav);
+    padding-bottom: 2px;
+}
+
+.resource-card .resource-link:hover {
+    color: var(--link-hover);
+    border-color: var(--link-hover);
+}
+
+
+/* Itinerary Section Styles */
+.itinerary-section {
+    padding: 2rem 1rem;
+    max-width: var(--maxw);
+    margin: 0 auto;
+}
+
+.itinerary-card {
+    /* Reuses .card styles */
+    margin-bottom: 2rem;
+}
+
+.itinerary-card .card-content {
+    /* Reset destination grid layout which was inherited */
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    align-items: stretch;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+}
+
+.itinerary-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+.itinerary-text h3 {
+    color: var(--nav);
+    font-size: 1.3rem;
+    padding: 0;
+    margin-bottom: 0.75rem;
+}
+
+.itinerary-text p {
+    font-size: 1rem;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.itinerary-points {
+    list-style-type: disc;
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.itinerary-points li {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 7. Media Queries (Desktop) - TRIP SPECIFIC OVERRIDES
+|--------------------------------------------------------------------------
+*/
+
+@media (min-width: 1200px) {
+    .planning-guide-section {
+        padding: 6rem 4rem 2rem;
+        text-align: left;
+    }
+    .planning-guide-section h2 {
+        text-align: left;
+    }
+
+    .itinerary-section {
+        padding: 4rem;
+    }
+    .itinerary-section h2 {
+        text-align: left;
+    }
+
+    /* Itinerary Cards: Row Layout */
+    .itinerary-card .card-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+        padding: 4rem;
+    }
+
+    .itinerary-image {
+        flex: 0 0 40%; /* Fixed width for image */
+    }
+
+    .itinerary-text {
+        flex: 1;
+    }
+
+    .itinerary-card.reverse .card-content {
+        flex-direction: row-reverse;
+    }
+
+    .itinerary-image img {
+        height: 350px;
+        border-radius: var(--radius);
     }
 }

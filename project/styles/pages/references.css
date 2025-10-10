@@ -1,0 +1,72 @@
+/*
+|--------------------------------------------------------------------------
+| REFERENCES PAGE - SMALL DISPLAY (DEFAULT/MOBILE)
+|--------------------------------------------------------------------------
+*/
+
+/* Hero Section */
+.hero-references {
+    /* Use a simple, clean, or documentation-themed image */
+    background: url("../images/img/references-hero.jpg") no-repeat center center/cover;
+}
+
+/* REFERENCES STYLES */
+.references-section {
+    padding: 4rem 1rem;
+    max-width: var(--maxw);
+    margin: 0 auto;
+}
+
+.references-section h2 {
+    padding-left: 0; 
+    padding-right: 0;
+    margin-bottom: 2rem;
+    color: var(--nav);
+    text-align: center;
+}
+
+.reference-category {
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.reference-category h3 {
+    color: var(--accent);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5rem;
+    padding-left: 0; 
+    padding-right: 0;
+}
+
+.reference-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reference-category li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    border-left: 3px solid var(--nav);
+    padding-left: 1rem;
+}
+
+/*
+|--------------------------------------------------------------------------
+| REFERENCES PAGE - LARGE DISPLAY (DESKTOP OVERRIDES)
+|--------------------------------------------------------------------------
+*/
+@media (min-width: 1200px) {
+    .references-section {
+        padding: 6rem 4rem;
+    }
+    .references-section h2 {
+        text-align: left;
+    }
+}

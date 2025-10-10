@@ -1,0 +1,154 @@
+/*
+|--------------------------------------------------------------------------
+| CULTURE PAGE - SMALL DISPLAY (DEFAULT/MOBILE)
+|--------------------------------------------------------------------------
+*/
+
+/* Hero Section */
+.hero-culture {
+    /* Use a background image relevant to culture (e.g., masks, fabrics, or a cultural event) */
+    background: url("../../images/img/masqurade.jpg") no-repeat center center/cover;
+}
+
+/* Culture Topics Grid */
+.cultural-topics-grid {
+    padding: 4rem 1rem;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cultural-topics-grid h2,
+.ethnic-groups h2 {
+    padding-left: 0; 
+    padding-right: 0;
+    margin-bottom: 2rem;
+    color: var(--nav);
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.topic-card {
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+}
+
+.topic-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.topic-card .card-info {
+    padding: 1.25rem;
+}
+
+.topic-card h3 {
+    font-size: 1.15rem;
+    color: var(--nav);
+    margin-bottom: 0.5rem;
+    padding: 0; 
+}
+
+.topic-card p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 1rem;
+    padding: 0; 
+    line-height: 1.4;
+}
+
+.topic-card .learn-more {
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px dotted var(--accent);
+    padding-bottom: 2px;
+}
+
+.topic-card .learn-more:hover {
+    color: var(--link-hover);
+    border-color: var(--link-hover);
+}
+
+/* Ethnic Groups Section */
+.ethnic-groups {
+    padding: 2rem 0;
+    max-width: var(--maxw);
+    margin: 0 auto;
+}
+
+.ethnic-groups h2 {
+    text-align: center;
+}
+
+.culture-card {
+    /* Reuses .card styles */
+    margin: 2rem 1rem; /* Add margin for mobile separation */
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| CULTURE PAGE - LARGE DISPLAY (DESKTOP OVERRIDES)
+|--------------------------------------------------------------------------
+*/
+@media (min-width: 1200px) {
+
+    .cultural-topics-grid {
+        padding: 6rem 4rem 2rem;
+    }
+    
+    .cultural-topics-grid h2 {
+        text-align: left;
+    }
+
+    .ethnic-groups {
+        padding: 4rem;
+    }
+
+    .ethnic-groups h2 {
+        text-align: left;
+    }
+    
+    /* Reverse layout for alternate cards (Yoruba, Igbo, etc.) */
+    .culture-card .card-content {
+        /* Reset destination grid layout which was inherited */
+        display: flex; 
+        flex-direction: row; 
+        gap: 3rem;
+        padding: 3rem 4rem;
+    }
+    
+    .culture-card.reverse .card-content {
+        flex-direction: row-reverse;
+    }
+
+    .culture-text {
+        flex: 1;
+    }
+
+    .culture-image {
+        flex: 1;
+        max-width: 45%;
+    }
+    
+    .culture-image img {
+        border-radius: var(--radius);
+        max-height: 400px;
+    }
+}

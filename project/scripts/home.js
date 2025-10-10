@@ -103,15 +103,14 @@ function createFestivalCard(festivals) {
         card.className = 'festival-card';
         card.innerHTML = `
             <h3>${festival.title}</h3>
-            <p>${festival.description}</p>
-            <p><strong>Date:</strong> ${festival.date}</p>
-            <p><strong>Location:</strong> ${festival.city}</p>
-            <a href="${festival.link}">Learn More</a>
+            <p class="description">${festival.description}</p>
+            <p class="details"><strong>Date:</strong> ${festival.date}</p>
+            <p class="details"><strong>Location:</strong> ${festival.city}</p>
+            <a href="${festival.link}" class="explore-button small-button learn-more">Learn More</a>
         `;
         festivalContainer.appendChild(card);
     });
 }
-
 // Run after page load
 window.addEventListener('DOMContentLoaded', () => {
     createFestivalCard(festivalPlaces);

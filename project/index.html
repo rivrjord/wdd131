@@ -7,11 +7,14 @@
         <title>Dream Nigeria | Travel Site</title>
         <meta name="description" content="Lawrence Okon | Dream Nigeria | Travel Website">
         <meta name="author" content="Lawrence Okon">
-        <link rel="stylesheet" href="styles/base.css">
+        <!-- <link rel="stylesheet" href="styles/base.css"> -->
         <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         />
+        <link rel="stylesheet" href="styles/global/base.css">
+        <link rel="stylesheet" href="styles/global/utilities.css">
+        <link rel="stylesheet" href="styles/pages/home.css">
         <script src="scripts/home.js" defer></script>
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -149,35 +152,40 @@
         </main>
 
     <!-- Footer -->
-        <footer>
 
-            <section class="newsletter-section">
-                <h2>Join the Dream Nigeria Community</h2>
-                <p>Subscribe to our newsletter for exclusive travel tips, cultural stories, and festival updates delivered straight to your inbox.</p>
+    <footer>
 
-                <form class="newsletter-form" action="/subscribe" method="post">
-                    <div class="form-group newsletter-input-group">
-                        <label for="subscribe-email" class="sr-only">Email Address</label>
-                        <input type="email" id="subscribe-email" name="subscribeEmail" required placeholder="Enter your email address">
-                        <button type="submit" class="explore-button">SUBSCRIBE</button>
-                    </div>
-                </form>
-            </section>
-            <nav>
+        <section class="newsletter-section">
+            <h2>Join the Dream Nigeria Community</h2>
+            <p>Subscribe to our newsletter for exclusive travel tips, cultural stories, and festival updates delivered straight to your inbox.</p>
+
+            <form class="newsletter-form" action="/subscribe" method="post">
+                <div class="form-group newsletter-input-group">
+                    <label for="subscribe-email" class="sr-only">Email Address</label>
+                    <input type="email" id="subscribe-email" name="subscribeEmail" required placeholder="Enter your email address">
+                    <button type="submit" class="explore-button">SUBSCRIBE</button>
+                </div>
+            </form>
+        </section>
+        
+        <nav>
+            <div class="logo-group">
                 <img src="images/dream-nigeria-logo.svg" alt="Dream Nigeria Logo" width="30" height="30">
                 <h3>DreamNigeria</h3>
-                <ul>
-                    <li><a href="siteplan.html">Site Plan</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="references.html">References</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-            </nav>
-            <p>&copy; 2025 Dream Nigeria. All rights reserved.</p>
-        </footer>
+            </div>
+            
+            <ul>
+                <li><a href="siteplan.html">Site Plan</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </nav>
+        <p>&copy; 2025 Dream Nigeria. All rights reserved.</p>
+    </footer>
     </body>
 </html>

@@ -1,0 +1,432 @@
+/*
+|--------------------------------------------------------------------------
+| HOME PAGE - SMALL DISPLAY (DEFAULT/MOBILE)
+|--------------------------------------------------------------------------
+*/
+
+/* Hero Section */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("../../images/img/hero1.jpg") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+/* Gradient overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.7) 20%,
+        rgba(0, 0, 0, 0.3) 60%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Make sure hero content stays on top */
+.hero-text,
+.social-icons {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    text-align: center;
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-text h1 {
+    margin: 0;
+    line-height: 0.9;
+}
+
+.dream {
+    font-size: 3rem;
+    font-weight: lighter;
+    line-height: 0.5;
+}
+
+.nigeria {
+    font-size: 4rem;
+    color: var(--accent);
+}
+
+.info {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    max-width: 480px;
+    color: #f0f0f0;
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-icons a {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background-color: var(--link-hover);
+    color: var(--ink2);
+    transform: translateY(-3px);
+    border: none;
+}
+
+
+/* Main Content Components (Cards & Festivals) */
+
+.card img {
+    width: auto;
+    height: 200px;
+}
+
+.card-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.card-content img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    display: block;
+}
+
+.festivals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.festivals h2 {
+    padding-top: 2rem;
+}
+
+.festival-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.festival-card {
+    background: transparent;
+    border: 1px solid #5d646b;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    height: 350px;
+}
+
+
+.festival-card p{
+    font-size: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.festival-card h3 {
+    font-size: 1.1rem;
+    color: var(--nav);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.festival-card .description {
+    flex-grow: 1;
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.festival-card .details {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.festival-card .learn-more {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem 1.75rem; 
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: var(--accent); 
+    color: white;
+    border: none; 
+    border-radius: 6px; 
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: flex-start;
+}
+
+.festival-card .learn-more:hover {
+    background-color: var(--link-hover); 
+    transform: translateY(-2px); 
+    color: black;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| HOME PAGE - FORM STYLES
+|--------------------------------------------------------------------------
+*/
+
+.form-section {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.form-section h2, .form-section p {
+    text-align: center;
+    padding: 0;
+}
+
+.form-section h2 {
+    color: var(--nav);
+    margin-bottom: 0.5rem;
+}
+
+.form-section p {
+    margin-bottom: 2rem;
+}
+
+.trip-inquiry-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.trip-inquiry-form button[type="submit"] {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| HOME PAGE - LARGE DISPLAY (DESKTOP OVERRIDES)
+|--------------------------------------------------------------------------
+*/
+
+@media (min-width: 1200px) {
+    
+    /* Hero */
+    .hero {
+    position: relative;
+    justify-content: flex-end; /* push content to bottom */
+    align-items: flex-start;   /* align to the left */
+    padding: 4rem 4rem;   
+    padding-top: 4rem;     /* add space from edges */
+    text-align: left;
+    }
+
+    .hero-actions {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    }
+
+    .hero-text {
+        margin-bottom: 1rem; /* small gap before icons */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+        margin-top: 1rem;
+        margin: 20px 0;
+    }
+
+    .social-icons a{
+        border: 1px solid #ccc;
+        border-radius: 20%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 3px;
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Main Content - General Text */
+    p { padding-left: 0; padding-right: 0; }
+    h1, h2, h3 { padding-left: 0; padding-right: 0; }
+    
+    /* Main Content - Cards */
+    .card-content img { border-radius: 0; }
+    
+    .card-content {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: space-around;
+        justify-items: center;
+        padding: 4rem;
+        text-align: left;
+        border-radius: 1px;
+    }
+
+    .subheading {
+        margin: 1rem 0 .5rem;
+        font-size: 1.05rem;
+        font-weight: 900;
+        color: wheat;
+        position: relative;
+    }
+
+    .subheading::after {
+        content: "";
+        display: block;
+        height: 2px;
+        background: var(--border);
+        margin-top: .5rem;
+    }
+
+    .about-text>p,
+    .place p {
+        text-align: justify;
+        text-align-last: left;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+    }
+
+    .about-photo img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 8px;
+        display: block;
+    }
+
+
+    .links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: .75rem 1.25rem;
+        list-style: none;
+        
+        padding: 1rem 1.25rem 1.25rem;
+        margin: 0;
+    }
+
+
+    .links li {
+        margin: .6rem 0;
+        list-style-type: disc;
+    }
+
+    .links a {
+        color: var(--link);
+        text-decoration: underline;
+        font-weight: 700;
+    }
+
+    .links a:hover,
+    .links a:focus {
+        color: var(--link-hover);
+        outline: none;
+    }
+
+    .place .nigeria {
+        float: left;
+        width: min(280px, 45%);
+        margin: 0 1rem .5rem 0;
+        text-align: left;
+    }
+
+    .place::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .place p {
+        max-width: 70ch;
+        margin: 1rem 0 0;
+    }
+
+    .nigeria img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+    }
+
+    .nigeria figcaption {
+        margin-top: .4rem;
+        font-size: .9rem;
+        color: var(--muted);
+        margin-top: .5rem;
+    }
+
+    .festival-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* wider cards */
+    }
+}

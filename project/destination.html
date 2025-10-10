@@ -7,9 +7,13 @@
     <title>Destinations | Dream Nigeria</title>
     <meta name="description" content="Explore the best tourist destinations in Nigeria, including cultural hubs, natural wonders, and vibrant cities.">
     <meta name="author" content="Lawrence Okon">
-    <link rel="stylesheet" href="styles/base.css">
+    
+    <link rel="stylesheet" href="styles/global/base.css">
+    <link rel="stylesheet" href="styles/global/utilities.css">
+    <link rel="stylesheet" href="styles/pages/destination.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <script src="scripts/home.js" defer></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
@@ -44,86 +48,54 @@
                 <p class="info">Nigeria is a land of vibrant contrasts. Discover our top regions, from the bustling cities and serene coastlines to the historic northern lands and lush rainforests.</p> 
             </div>
             <div class="hero-actions">
-                <a href="#destination-grid" class="explore-button">VIEW MAP</a>
+                <a href="#destination-grid" class="explore-button">EXPLORE</a>
             </div>
-            </section>
+        </section>
 
 
         <section class="destinations-grid-section" id="destination-grid">
             <h2>Featured Regions</h2>
             <div class="destination-grid">
-
-                <article class="destination-card">
-                    <img src="images/lagos-cityscape.webp" alt="Lagos Cityscape" loading="lazy">
-                    <div class="card-info">
-                        <h3>Lagos: The City of Aquatic Splendour</h3>
-                        <p>A bustling, vibrant mega-city known for its dynamic nightlife, beautiful beaches, and thriving arts scene. A true cultural and economic hub.</p>
-                        <a href="#" class="learn-more">See Lagos Guides</a>
-                    </div>
-                </article>
-
-                <article class="destination-card">
-                    <img src="images/abuja-rock.webp" alt="Abuja Aso Rock" loading="lazy">
-                    <div class="card-info">
-                        <h3>Abuja: The Nation's Capital</h3>
-                        <p>Planned and organized, Abuja is home to stunning modern architecture, Aso Rock, and key national monuments. A center of power and green spaces.</p>
-                        <a href="#" class="learn-more">See Abuja Guides</a>
-                    </div>
-                </article>
-
-                <article class="destination-card">
-                    <img src="images/calabar-carnival.webp" alt="Calabar Carnival Dancers" loading="lazy">
-                    <div class="card-info">
-                        <h3>Calabar: Culture & Carnival Hub</h3>
-                        <p>Famous for its annual, spectacular Carnival, Calabar offers rich historical sites, serene rainforests, and a relaxed, beautiful atmosphere.</p>
-                        <a href="#" class="learn-more">See Calabar Guides</a>
-                    </div>
-                </article>
-
-                <article class="destination-card">
-                    <img src="images/kano-dye-pits.webp" alt="Kano Ancient Dye Pits" loading="lazy">
-                    <div class="card-info">
-                        <h3>Kano: Ancient City of Commerce</h3>
-                        <p>Explore the historic dye pits, ancient city walls, and the bustling Kurmi Market. Kano is a deep dive into the Hausa culture and history.</p>
-                        <a href="#" class="learn-more">See Kano Guides</a>
-                    </div>
-                </article>
-
-            </div>
+                </div>
         </section>
 
         <div class="content"></div>
     </main>
 
-        <footer>
+    <footer>
 
-            <section class="newsletter-section">
-                <h2>Join the Dream Nigeria Community</h2>
-                <p>Subscribe to our newsletter for exclusive travel tips, cultural stories, and festival updates delivered straight to your inbox.</p>
+        <section class="newsletter-section">
+            <h2>Join the Dream Nigeria Community</h2>
+            <p>Subscribe to our newsletter for exclusive travel tips, cultural stories, and festival updates delivered straight to your inbox.</p>
 
-                <form class="newsletter-form" action="/subscribe" method="post">
-                    <div class="form-group newsletter-input-group">
-                        <label for="subscribe-email" class="sr-only">Email Address</label>
-                        <input type="email" id="subscribe-email" name="subscribeEmail" required placeholder="Enter your email address">
-                        <button type="submit" class="explore-button">SUBSCRIBE</button>
-                    </div>
-                </form>
-            </section>
-            <nav>
+            <form class="newsletter-form" action="/subscribe" method="post">
+                <div class="form-group newsletter-input-group">
+                    <label for="subscribe-email" class="sr-only">Email Address</label>
+                    <input type="email" id="subscribe-email" name="subscribeEmail" required placeholder="Enter your email address">
+                    <button type="submit" class="explore-button">SUBSCRIBE</button>
+                </div>
+            </form>
+        </section>
+        
+        <nav>
+            <div class="logo-group">
                 <img src="images/dream-nigeria-logo.svg" alt="Dream Nigeria Logo" width="30" height="30">
                 <h3>DreamNigeria</h3>
-                <ul>
-                    <li><a href="siteplan.html">Site Plan</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="references.html">References</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-            </nav>
-            <p>&copy; 2025 Dream Nigeria. All rights reserved.</p>
-        </footer>
+            </div>
+            
+            <ul>
+                <li><a href="siteplan.html">Site Plan</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </nav>
+        <p>&copy; 2025 Dream Nigeria. All rights reserved.</p>
+    </footer>
+    <script src="scripts/destination.js" defer></script>
 </body>
 </html>

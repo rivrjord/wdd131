@@ -7,9 +7,12 @@
     <title>Our Team | Dream Nigeria</title>
     <meta name="description" content="Meet the team behind Dream Nigeria, dedicated to sharing the beauty and culture of Nigeria with the world.">
     <meta name="author" content="Lawrence Okon">
-    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/global/base.css">
+    <link rel="stylesheet" href="styles/global/utilities.css">
+    <link rel="stylesheet" href="styles/pages/team.css">    
+    <!-- <link rel="stylesheet" href="styles/base.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <script src="scripts/home.js" defer></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
@@ -28,7 +31,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="destination.html">Destination</a></li>
                     <li><a href="culture.html">Culture/Lifestyle</a></li>
-                    <li><a href="trips.html">Trip</a></li>
+                    <li><a href="trip.html">Trip</a></li>
                     <li><a href="team.html" class="active">Team</a></li>
                 </ul>
             </nav>
@@ -37,108 +40,51 @@
 
     <main class="container">
 
-        <section class="hero hero-team">
-            <div class="hero-text">
-                <p class="dream">MEET</p>
-                <h1 class="nigeria">THE TEAM</h1>
-                <p class="info">We are a dedicated group of travel enthusiasts, writers, and photographers passionate about promoting Nigerian tourism and heritage.</p>
-            </div>
-            <div class="hero-actions">
-                <a href="#team-grid" class="explore-button">OUR EXPERTS</a>
-            </div>
-        </section>
-
         <section class="team-grid-section" id="team-grid">
             <h2>Our Global Contributors</h2>
             <div class="team-grid">
 
-                <article class="team-member-card">
-                    <img src="images/team-member-1.webp" alt="Photo of Lawrence Okon" loading="lazy">
-                    <div class="card-info">
-                        <h3>Lawrence Okon</h3>
-                        <h4>Founder & Lead Editor</h4>
-                        <p>A seasoned journalist and travel consultant with a mission to change global perceptions of Nigeria through authentic storytelling.</p>
-                        <div class="member-social">
-                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="team-member-card">
-                    <img src="images/team-member-2.webp" alt="Photo of Aisha Bello" loading="lazy">
-                    <div class="card-info">
-                        <h3>Aisha Bello</h3>
-                        <h4>Culture & Lifestyle Writer</h4>
-                        <p>Specializes in Nigerian history, food, and fashion. Aisha ensures our cultural content is deeply researched and respectful.</p>
-                        <div class="member-social">
-                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="team-member-card">
-                    <img src="images/team-member-3.webp" alt="Photo of Emeka Nnamdi" loading="lazy">
-                    <div class="card-info">
-                        <h3>Emeka Nnamdi</h3>
-                        <h4>Destination Photographer</h4>
-                        <p>Responsible for capturing the stunning visuals that bring our travel guides to life. Emeka is based in Abuja.</p>
-                        <div class="member-social">
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-github"></i></a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="team-member-card">
-                    <img src="images/team-member-4.webp" alt="Photo of Tolu Adesina" loading="lazy">
-                    <div class="card-info">
-                        <h3>Tolu Adesina</h3>
-                        <h4>Trip Planning Specialist</h4>
-                        <p>Our expert on logistics, safety, and local transportation networks, making sure every trip itinerary is practical and safe.</p>
-                        <div class="member-social">
-                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
+                </div>
         </section>
 
         <div class="content"></div>
     </main>
 
-        <footer>
+    <footer>
 
-            <section class="newsletter-section">
-                <h2>Join the Dream Nigeria Community</h2>
-                <p>Subscribe to our newsletter for exclusive travel tips, cultural stories, and festival updates delivered straight to your inbox.</p>
+        <section class="newsletter-section">
+            <h2>Join the Dream Nigeria Community</h2>
+            <p>Subscribe to our newsletter for exclusive travel tips, cultural stories, and festival updates delivered straight to your inbox.</p>
 
-                <form class="newsletter-form" action="/subscribe" method="post">
-                    <div class="form-group newsletter-input-group">
-                        <label for="subscribe-email" class="sr-only">Email Address</label>
-                        <input type="email" id="subscribe-email" name="subscribeEmail" required placeholder="Enter your email address">
-                        <button type="submit" class="explore-button">SUBSCRIBE</button>
-                    </div>
-                </form>
-            </section>
-            <nav>
+            <form class="newsletter-form" action="/subscribe" method="post">
+                <div class="form-group newsletter-input-group">
+                    <label for="subscribe-email" class="sr-only">Email Address</label>
+                    <input type="email" id="subscribe-email" name="subscribeEmail" required placeholder="Enter your email address">
+                    <button type="submit" class="explore-button">SUBSCRIBE</button>
+                </div>
+            </form>
+        </section>
+        
+        <nav>
+            <div class="logo-group">
                 <img src="images/dream-nigeria-logo.svg" alt="Dream Nigeria Logo" width="30" height="30">
                 <h3>DreamNigeria</h3>
-                <ul>
-                    <li><a href="siteplan.html">Site Plan</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="references.html">References</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-            </nav>
-            <p>&copy; 2025 Dream Nigeria. All rights reserved.</p>
-        </footer>
+            </div>
+            <ul>
+                <li><a href="siteplan.html">Site Plan</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </nav>
+        <p>&copy; 2025 Dream Nigeria. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/home.js" defer></script>
+    <script src="scripts/team.js" defer></script>
 </body>
 </html>

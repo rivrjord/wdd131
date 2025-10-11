@@ -1,48 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="Lawrence Okon | Dynamic Web Fundamental | WDD 131 Website">
-  <meta name="author" content="Lawrence Okon">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WDD 131 – Thanks – Lawrence Okon</title>
-  
-  <link rel="stylesheet" href="styles/form.css">
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-  <!-- Script for counter and footer dates -->
-  <script src="scripts/thanks.js" defer></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Inquiry | Dream Nigeria</title>
+    <link rel="stylesheet" href="styles/global/base.css">
+    <link rel="stylesheet" href="styles/global/utilities.css">
+    <link rel="stylesheet" href="styles/pages/thanks.css"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script src="scripts/thanks.js" defer></script>
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header>
-    <h1 id="course-title">Product Review</h1>
-    <nav class="navigation"></nav>
-  </header>
-  
-  <!-- CONTENT -->
-  <main>
-    <h1>Product Review Submission</h1>
-    <p>Thank you for taking out the time to review our products.  
-       We will use your review to improve your experience.</p>
+    <header>
+        <div class="header-bar">
+            <div class="header-flex">
+                <img src="images/dream-nigeria-logo.svg" alt="Dream Nigeria Logo" width="35" height="auto">
+                <span>DreamNigeria</span>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destination.html">Destination</a></li>
+                    <li><a href="culture.html">Culture/Lifestyle</a></li>
+                    <li><a href="trip.html">Trip</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <p>You have submitted <span id="reviewCounter">0</span> reviews so far.</p>
-  </main>
-  
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>
-      &copy; <span id="currentyear"></span>
-      <span class="dot">|</span>
-      Lawrence Okon
-      <span class="dot">|</span>
-      Nigeria
-    </p>
-    <p id="lastmodified" class="lastmod" aria-live="polite"></p>
-  </footer>
+    <main class="container">
+        <section class="thanks-section"> 
+            <h1 class="nigeria">Inquiry Received!</h1>
+            <p>
+                Thank you for reaching out! A member of the Dream Nigeria team will review your custom trip request and get back to you within 1-2 business days via email.
+            </p>
+
+            <div class="card"> 
+                <h2>Your Trip Summary</h2>
+                <div id="summary-details">
+                    <p>Loading your details...</p>
+                </div>
+                <p>
+                    Please check your inbox (and spam folder) for our reply.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Dream Nigeria. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

@@ -172,7 +172,7 @@ header {
     text-align: center;
     padding: 1.6rem;
     text-decoration: none;
-    color: var(--link);
+    color: var(--ink);
     font-weight: 900;
     transition: 0.5s;
     font-size: clamp(1.2rem, 5vmin, 2rem);

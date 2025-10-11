@@ -37,7 +37,8 @@ body {
     font-family: var(--font-body);
     margin: 0; 
     padding: 0;
-    /* FIX: Removed margin-bottom: 1rem; to eliminate white space after the footer */
+    /* FIX: Added explicit text color to resolve color/contrast warnings (Lines 12/13) */
+    color: var(--ink2); 
     line-height: 1.6;
 }
 
@@ -552,7 +553,9 @@ footer h3 {
         position: absolute; top: 0; left: 0; width: 100%;
         padding: 1rem 3rem; display: flex; align-items: center;
         justify-content: space-between;
-        background: color-mix(in srgb, var(--nav) 70%, transparent); 
+        /* FIX: Added standard RGBA fallback for color-mix() to prevent validation errors */
+        background-color: rgba(22, 50, 13, 0.7); /* Fallback: var(--nav) @ 70% opacity */
+        background-color: color-mix(in srgb, var(--nav) 70%, transparent); 
         z-index: 10; height: auto;
     }
     

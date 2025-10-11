@@ -66,32 +66,26 @@ function stopRotation() {
     clearInterval(rotationInterval);
 }
 
-// REMOVED: window.onload = () => { ... } // Conflicted with DOMContentLoaded
-
-// REMOVED: const destinationSection = document.querySelector('.destination');
-// REMOVED: if (destinationSection) { ... } // This was running before the DOM was fully ready
-
 // Festival Data (remains the same)
 const festivalPlaces = [
     {
         title: 'Argungu Fishing Festival',
         description: 'Experience the vibrant Argungu Fishing Festival, a celebration of culture and tradition in Kebbi State.',
-        link: 'argungu-festival.html',
+        link: 'https://en.wikipedia.org/wiki/Argungu_Fishing_Festival',
         date: 'March 2025',
         city: 'Argungu, Kebbi State'
     },
-    // ... other festival data ...
     {
-        title: 'Osun-Osogbo Festival',
-        description: 'Join the Osun-Osogbo Festival, a sacred event honoring the river goddess Osun in Osogbo, Osun State.',
-        link: 'osun-osogbo-festival.html',
-        date: 'August 2025',
-        city: 'Osogbo, Osun State'
+        title: 'Ojude Oba Festival',
+        description: 'Experience the rich culture and spectacular horsemanship in Ijebu-Ode, Ogun State. This vibrant festival celebrates the Awujale of Ijebuland with magnificent parades by various age grades (Regberegbe) and thrilling equestrian displays.',
+        link: 'https://en.wikipedia.org/wiki/Ojude_Oba_festival',
+        date: '3rd day after Eid al-Kabir',
+        city: 'Ijebu-Ode, Ogun State,'
     },
     { 
         title: 'Eyo Festival',
         description: 'Witness the colorful Eyo Festival, a traditional Yoruba festival held in Lagos to honor the departed souls of Lagosians.',
-        link: 'eyo-festival.html',
+        link: 'https://en.wikipedia.org/wiki/Eyo_festival',
         date: 'May 2025',
         city: 'Lagos, Lagos State'
     }
@@ -107,13 +101,14 @@ function createFestivalCard(festivals) {
     }
 
     // Using map and join for more efficient DOM manipulation
+    // NOTE: Added target="_blank" to the <a> tag to open the link in a new tab.
     const festivalCardsHTML = festivals.map(festival => `
         <div class="festival-card">
             <h3>${festival.title}</h3>
             <p class="description">${festival.description}</p>
             <p class="details"><strong>Date:</strong> ${festival.date}</p>
             <p class="details"><strong>Location:</strong> ${festival.city}</p>
-            <a href="${festival.link}" class="explore-button small-button learn-more">Learn More</a>
+            <a href="${festival.link}" class="explore-button small-button learn-more" target="_blank">Learn More</a>
         </div>
     `).join('');
 

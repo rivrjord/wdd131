@@ -35,15 +35,15 @@ const resourceData = [
 
 const itineraryData = [
     {
-        className: "reverse",
-        image: "images/img/palace.jpg",
-        alt: "Ancient Palace in Northern Nigeria",
-        title: "10-Day Northern History Trek (Kano & Abuja)",
-        description: "An in-depth journey through Nigeria's north, exploring ancient trade routes, traditional emirate palaces, and the modern capital's landmarks.",
+        className: "",
+        image: "images/img/eko.webp",
+        alt: "Eko Atlantic City in Lagos",
+        title: "7-Day Coastal Culture Tour (Lagos & Calabar)",
+        description: "A fast-paced itinerary focusing on the dynamic arts scene of Lagos, historical sites, and concluding with the relaxed, festival atmosphere of Calabar.",
         points: [
-            "Tour the Kano Central Mosque and Dye Pits.",
-            "Hike around Abuja's Aso Rock.",
-            "Visit the National Museum in Abuja."
+            "Visit the Lekki Conservation Centre.",
+            "Explore Calabar's Marina Resort.",
+            "Experience Lagos nightlife."
         ],
         linkText: "Download Full Plan",
         linkUrl: "#"

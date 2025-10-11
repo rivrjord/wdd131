@@ -117,7 +117,7 @@ header {
 .navigation {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; <-- REMOVE this, we want to center the UL instead of list items */
     justify-content: center;
     list-style: none;
     margin: 0 auto;
@@ -128,7 +128,16 @@ header {
     opacity: 0;
     transform: translateY(-20px);
     transition: max-height 0.6s ease, opacity 0.4s ease, transform 0.4s ease;
-    text-align: center;
+    /* text-align: center; <-- KEEP this, but also apply to the ul */
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* This centers the inline/inline-block list items */
+    text-align: center; 
+    width: 100%; /* Ensure ul takes full space to align items */
 }
 
 .navigation li {

@@ -43,7 +43,7 @@ body {
 
 h1 {
     font-family: var(--font-heading);
-}    
+}     
 
 h1, h2, h3 {
     margin-top: 0;
@@ -115,29 +115,37 @@ header {
 }
 
 .navigation {
+    /* Full page overlay setup for mobile */
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 19;
+    background-color: rgba(22, 50, 13, 0.9); /* Translucent background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    
     display: flex;
     flex-direction: column;
-    /* align-items: center; <-- REMOVE this, we want to center the UL instead of list items */
     justify-content: center;
     list-style: none;
-    margin: 0 auto;
-    max-width: 760px;
-    background-color: rgba(22, 50, 13, 0.95);
+    margin: 0;
+    max-width: none;
+    
     overflow: hidden;
     max-height: 0;
     opacity: 0;
     transform: translateY(-20px);
     transition: max-height 0.6s ease, opacity 0.4s ease, transform 0.4s ease;
-    /* text-align: center; <-- KEEP this, but also apply to the ul */
 }
 
 .navigation ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    /* This centers the inline/inline-block list items */
     text-align: center; 
-    width: 100%; /* Ensure ul takes full space to align items */
+    width: 100%; 
 }
 
 .navigation li {
@@ -149,7 +157,7 @@ header {
 }
 
 .navigation.show {
-    max-height: 500px;
+    max-height: none; 
     opacity: 1;
     transform: translateY(0);
 }
@@ -162,12 +170,12 @@ header {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 0.75rem;
+    padding: 1.25rem;
     text-decoration: none;
     color: var(--link);
-    font-weight: 700;
+    font-weight: 900;
     transition: 0.5s;
-    font-size: clamp(1rem, 2vmin, 1.5rem);
+    font-size: clamp(1.2rem, 5vmin, 2rem);
 }
 
 .navigation a:hover,
@@ -547,8 +555,17 @@ footer h3 {
         background: color-mix(in srgb, var(--nav) 70%, transparent); 
         z-index: 10; height: auto;
     }
+    
     .navigation {
-        display: flex; flex-direction: row; background: transparent;
+        /* FIX: Overrides to revert navigation from mobile full-screen styles */
+        position: static; 
+        height: auto; 
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        /* END FIX */
+        
+        display: flex; flex-direction: row; 
         max-height: none; opacity: 1; transform: none; gap: 2rem;
     }
     .navigation li { display: inline-block !important; width: auto; opacity: 1; transform: none; animation: none; }
@@ -556,10 +573,12 @@ footer h3 {
         display: flex; justify-content: center; align-items: center;
         gap: 3rem; list-style: none; margin: 0 auto; padding: 0;
     }
+    
     .navigation a {
         color: #E6EEF7; text-decoration: none; font-weight: 500;
         line-height: 1; padding: .25rem .25rem; border-bottom: 2px solid transparent;
         transition: border-color .15s ease, color .15s ease, transform .15s ease;
+        font-size: clamp(1rem, 3vmin, 2rem);
     }
     .navigation a:hover { color: var(--accent); outline: none; }
 

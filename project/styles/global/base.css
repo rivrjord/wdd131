@@ -35,9 +35,9 @@ html, body {
 
 body {
     font-family: var(--font-body);
-    margin: 0;
+    margin: 0; 
     padding: 0;
-    margin-bottom: 1rem;
+    /* FIX: Removed margin-bottom: 1rem; to eliminate white space after the footer */
     line-height: 1.6;
 }
 
@@ -115,7 +115,7 @@ header {
 }
 
 .navigation {
-    /* Full page overlay setup for mobile */
+    /* Full page overlay setup for mobile (Translucent with blur) */
     position: fixed;
     top: 60px;
     left: 0;

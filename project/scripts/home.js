@@ -11,6 +11,12 @@ const destinationPlaces = [
         description: 'Discover the iconic Aso Rock, a symbol of Nigeria\'s rich history and culture, located in the heart of Abuja.',
         link: 'aso-rock.html'
     },
+    {
+        image: 'images/img/drill.jpg',
+        title: 'Drill Ranch',
+        description:'Discover Drill Ranch, a wildlife sanctuary in Cross River State dedicated to protecting endangered drill monkeys and preserving Nigeria’s rainforest heritage.',
+        link: 'drill.html'
+    },
     { 
         image: 'images/img/lekki-conservation-centre.jpg',
         title: 'Lekki Conservation Center',
@@ -44,7 +50,7 @@ function updateDestination() {
 
 // Start the rotation
 function startRotation() {
-    rotationInterval = setInterval(updateDestination, 5000);
+    rotationInterval = setInterval(updateDestination, 3000);
 }
 
 // Stop the rotation

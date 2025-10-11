@@ -127,11 +127,19 @@
 
 .card-content img {
     width: 100%;
-    height: auto;
-    max-height: 300px;
-    object-fit: cover;
+    /* Set a fixed height for consistency */
+    height: 250px; 
+    /* The max-height property is now redundant, but object-fit: cover is essential */
+    object-fit: cover; 
     border-radius: var(--radius);
     display: block;
+}
+
+.destination-text {
+    height: 250px;
+    overflow-y: auto;
+    text-align: center;
+    max-width: 500px;
 }
 
 .festivals {
@@ -331,6 +339,22 @@
         border-radius: 1px;
     }
 
+    .destination-image img {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0;
+    }
+
+        .destination-text {
+        /* Adjust height for the wider desktop layout */
+        height: 400px; 
+        overflow-y: auto;
+        /* When using grid, you must remove the mobile centering: */
+        align-items: flex-start; 
+        text-align: left;
+    }
+    
     .subheading {
         margin: 1rem 0 .5rem;
         font-size: 1.05rem;

@@ -19,7 +19,7 @@ const culturalTopicsData = [
     },
     {
         className: "arts",
-        image: "images/img/art.jpg",
+        image: "images/img/art.webp",
         alt: "Film crew setting up a scene in Nigeria",
         title: "Arts, Film & Music",
         description: "The global dominance of Afrobeats and the massive influence of Nollywood (Nigerian cinema). Dive into the creativity defining modern Nigeria.",

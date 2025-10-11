@@ -24,7 +24,7 @@ const destinationPlaces = [
         link: 'lekki-conservation-center.html'
     },
     { 
-        image: 'images/img/agbokim.jpg',
+        image: 'images/img/agbokim.webp',
         title: 'Agbokim Waterfalls',
         description: 'Witness the stunning Agbokim Waterfalls, a series of cascading falls surrounded by tropical rainforest in Cross River State.',
         link: 'agbokim-waterfalls.html'

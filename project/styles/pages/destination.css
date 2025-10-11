@@ -6,9 +6,24 @@
 
 /* Hero Section */
 .hero-destination {
-    /* Example: Use a different background image specific to destinations */
     background: url("../../images/img/hero4.jpg") no-repeat center center/cover;
 }
+
+
+.hero-text {
+    text-align: center;
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-text h1 {
+    margin: 0;
+    line-height: 0.9;
+    font-size: 3rem;
+}
+
 
 /* Destinations Grid */
 .destinations-grid-section {
@@ -92,6 +107,7 @@
 @media (min-width: 1200px) {
     .destinations-grid-section {
         padding: 6rem 4rem;
+        text-align: left;
     }
     .destinations-grid-section h2 {
         text-align: left;

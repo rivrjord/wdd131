@@ -11,7 +11,7 @@ const teamData = [
         ]
     },
     {
-        image: "images/img/ben.jpg",
+        image: "images/img/ben.webp",
         alt: "Photo of Ben Iwara",
         name: "Ben Iwara",
         role: "Destination Photographer",

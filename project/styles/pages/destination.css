@@ -6,7 +6,9 @@
 
 /* Hero Section */
 .hero-destination {
-    background: url("../../images/img/hero4.jpg") no-repeat center center/cover;
+    background: url("../../images/img/Destination.webp") no-repeat center center/cover;
+    height: 90vh;
+
 }
 
 
@@ -112,4 +114,12 @@
     .destinations-grid-section h2 {
         text-align: left;
     }
+
+    .hero-text {
+    text-align: left;
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
 }

@@ -1,7 +1,7 @@
 const culturalTopicsData = [
     {
         className: "food",
-        image: "images/img/jollof.jpg",
+        image: "images/img/jollof.webp",
         alt: "Plate of Jollof Rice and Plantain",
         title: "Food: A Culinary Journey",
         description: "Explore the bold, spicy flavors of Nigerian cuisine. Learn about Jollof Rice, Suya, Egusi soup, and regional specialties that define our tables.",
@@ -10,7 +10,7 @@ const culturalTopicsData = [
     },
     {
         className: "attire",
-        image: "images/img/culture.jpg",
+        image: "images/img/culture.webp",
         alt: "People in colorful Nigerian traditional attire",
         title: "Fashion & Attire",
         description: "From the elaborate Agbada and George to the modern use of Ankara, discover the deep significance of clothing in Nigerian identity and celebration.",

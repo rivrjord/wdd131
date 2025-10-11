@@ -1,24 +1,24 @@
 const destinationPlaces = [
     {
-        image: 'images/img/obudu.jpg',
+        image: 'images/img/obudu.webp',
         title: 'Obudu Mountain Resort',
         description: 'Experience the breathtaking beauty of Obudu Mountain Resort, a perfect blend of nature and adventure.',
         link: 'obudu.html'
     },
     {
-        image: 'images/img/aso-rock.jpg',
+        image: 'images/img/aso-rock.webp',
         title: 'Aso Rock',
         description: 'Discover the iconic Aso Rock, a symbol of Nigeria\'s rich history and culture, located in the heart of Abuja.',
         link: 'aso-rock.html'
     },
     {
-        image: 'images/img/drill.jpg',
+        image: 'images/img/drill.webp',
         title: 'Drill Ranch',
         description:'Discover Drill Ranch, a wildlife sanctuary in Cross River State dedicated to protecting endangered drill monkeys and preserving Nigeria’s rainforest heritage.',
         link: 'drill.html'
     },
     { 
-        image: 'images/img/lekki-conservation-centre.jpg',
+        image: 'images/img/lekki.webp',
         title: 'Lekki Conservation Center',
         description: 'Explore the lush greenery and diverse wildlife at Lekki Conservation Center, a haven for nature lovers in Lagos.',
         link: 'lekki-conservation-center.html'

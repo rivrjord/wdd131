@@ -7,7 +7,14 @@
 /* Hero Section */
 .hero-culture {
     /* Use a background image relevant to culture (e.g., masks, fabrics, or a cultural event) */
-    background: url("../../images/img/masqurade.jpg") no-repeat center center/cover;
+    background: url("../../images/img/masqurade.webp") no-repeat center center/cover;
+    height: 90vh;
+}
+
+.hero-text h1 {
+    margin: 0;
+    line-height: 0.9;
+    font-size: 3rem;
 }
 
 /* Culture Topics Grid */

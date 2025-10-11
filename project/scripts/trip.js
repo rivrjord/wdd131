@@ -50,7 +50,7 @@ const itineraryData = [
     },
     {
         className: "reverse",
-        image: "images/img/palace.jpg",
+        image: "images/img/palace.webp",
         alt: "Ancient Palace in Northern Nigeria",
         title: "10-Day Northern History Trek (Kano & Abuja)",
         description: "An in-depth journey through Nigeria's north, exploring ancient trade routes, traditional emirate palaces, and the modern capital's landmarks.",

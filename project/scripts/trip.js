@@ -35,7 +35,7 @@ const resourceData = [
 
 const itineraryData = [
     {
-        className: "",
+        className: "reverse",
         image: "images/img/eko.webp",
         alt: "Eko Atlantic City in Lagos",
         title: "7-Day Coastal Culture Tour (Lagos & Calabar)",

@@ -2,7 +2,7 @@ const destinationsData = [
     {
         name: "Lagos: The City of Aquatic Splendour",
         description: "A bustling, vibrant mega-city known for its dynamic nightlife, beautiful beaches, and thriving arts scene. A true cultural and economic hub.",
-        image: "images/img/lagos.jpg",
+        image: "images/img/lagos.webp",
         alt: "Lagos Cityscape",
         link: "#", // Replace with actual link
         linkText: "See Lagos Guides"
@@ -10,7 +10,7 @@ const destinationsData = [
     {
         name: "Abuja: The Nation's Capital",
         description: "Planned and organized, Abuja is home to stunning modern architecture, Aso Rock, and key national monuments. A center of power and green spaces.",
-        image: "images/img/abuja.jpg",
+        image: "images/img/abuja.webp",
         alt: "Abuja Aso Rock",
         link: "#",
         linkText: "See Abuja Guides"
@@ -18,7 +18,7 @@ const destinationsData = [
     {
         name: "Calabar: Culture & Carnival Hub",
         description: "Famous for its annual, spectacular Carnival, Calabar offers rich historical sites, serene rainforests, and a relaxed, beautiful atmosphere.",
-        image: "images/img/carnival.jpg",
+        image: "images/img/carnival.webp",
         alt: "Calabar Carnival Dancers",
         link: "#",
         linkText: "See Calabar Guides"
@@ -26,7 +26,7 @@ const destinationsData = [
     {
         name: "Kano: Ancient City of Commerce",
         description: "Explore the historic dye pits, ancient city walls, and the bustling Kurmi Market. Kano is a deep dive into the Hausa culture and history.",
-        image: "images/img/kano.jpg",
+        image: "images/img/kano.webp",
         alt: "Kano Ancient Dye Pits",
         link: "#",
         linkText: "See Kano Guides"

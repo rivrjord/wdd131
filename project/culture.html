@@ -7,12 +7,22 @@
     <title>Culture & Lifestyle | Dream Nigeria</title>
     <meta name="description" content="Discover the rich cultural heritage, traditions, food, and modern lifestyle of Nigeria's diverse ethnic groups.">
     <meta name="author" content="Lawrence Okon">
-    <!-- <link rel="stylesheet" href="styles/base.css"> -->
+
+    <!-- Global Styles -->
     <link rel="stylesheet" href="styles/global/base.css">
     <link rel="stylesheet" href="styles/global/utilities.css">
     <link rel="stylesheet" href="styles/pages/culture.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Scripts -->
     <script src="scripts/home.js" defer></script>
+    <script src="scripts/newsletter.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/culture.js" defer></script>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
@@ -22,7 +32,7 @@
     <header>
         <div class="header-bar">
             <div class="header-flex">
-                <img src="images/dream-nigeria-logo.svg" alt="Dream Nigeria Logo" width="35">
+                <img src="images/dream-nigeria-logo.svg" alt="Dream Nigeria Logo" width="35" loading="lazy">
                 <span>DreamNigeria</span>
                 <a id="menu" href="#"></a>
             </div>
@@ -40,6 +50,7 @@
 
     <main class="container">
 
+        <!-- Hero Section -->
         <section class="hero hero-culture">
             <div class="hero-text">
                 <p class="dream">EXPERIENCE</p>
@@ -51,13 +62,15 @@
             </div>
         </section>
 
+        <!-- Cultural Topics Section -->
         <section class="cultural-topics-grid" id="topics">
             <h2>Our Vibrant Heritage</h2>
             <div class="topic-grid">
-
+                <!-- Content dynamically loaded by JS -->
             </div>
         </section>
 
+        <!-- Ethnic Groups Section -->
         <section class="ethnic-groups">
             <h2>The Major Ethnicities</h2>
             
@@ -66,10 +79,10 @@
                     <div class="culture-text">
                         <h3>The Yoruba People</h3>
                         <p>Known for their deep-rooted monarchy (Obas), intricate carvings, and vast traditional markets. The Yoruba culture is prominent in the South West, including Lagos and Ibadan.</p>
-                        <a href="https://en.wikipedia.org/wiki/Yoruba_people" class="explore-button small-button" target="_blank">Yoruba Traditions</a>
+                        <a href="https://en.wikipedia.org/wiki/Yoruba_people" class="explore-button small-button" target="_blank" rel="noopener noreferrer">Yoruba Traditions</a>
                     </div>
                     <div class="culture-image">
-                        <img src="images/img/yoruba.jpg" alt="Yoruba King in full regal attire" loading="lazy">
+                        <img src="images/img/yoruba.jpg" alt="Yoruba King in full regal attire" loading="lazy" width="500" height="auto">
                     </div>
                 </div>
             </div>
@@ -79,10 +92,10 @@
                     <div class="culture-text">
                         <h3>The Igbo Nation</h3>
                         <p>A highly decentralized and entrepreneurial people from the South East, known for their elaborate masquerades, Nri kingdom history, and Ozo titles system.</p>
-                        <a href="https://en.wikipedia.org/wiki/Igbo_people" class="explore-button small-button" target="_blank">Igbo Masquerades</a>
+                        <a href="https://en.wikipedia.org/wiki/Igbo_people" class="explore-button small-button" target="_blank" rel="noopener noreferrer">Igbo Masquerades</a>
                     </div>
                     <div class="culture-image">
-                        <img src="images/img/igbo.webp" alt="Igbo Masquerade dancer" loading="lazy">
+                        <img src="images/img/igbo.webp" alt="Igbo Masquerade dancer" loading="lazy" width="500" height="auto">
                     </div>
                 </div>
             </div>
@@ -94,7 +107,7 @@
     </main>
 
     <footer>
-
+        <!-- Newsletter Section -->
         <section class="newsletter-section">
             <h2>Join the Dream Nigeria Community</h2>
             <p>Subscribe to our newsletter for exclusive travel tips, cultural stories, and festival updates delivered straight to your inbox.</p>
@@ -108,9 +121,10 @@
             </form>
         </section>
         
+        <!-- Footer Navigation -->
         <nav>
             <div class="logo-group">
-                <img src="images/dream-nigeria-logo.svg" alt="Dream Nigeria Logo" width="30" height="30">
+                <img src="images/dream-nigeria-logo.svg" alt="Dream Nigeria Logo" width="30" height="30" loading="lazy">
                 <h3>DreamNigeria</h3>
             </div>
             
@@ -119,16 +133,22 @@
                 <li><a href="#">Terms</a></li>
                 <li><a href="references.html">References</a></li>
             </ul>
+
             <div class="social-icons">
-                <a href="#" class="icon"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="icon" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="#" class="icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#" class="icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
             </div>
         </nav>
+
         <p id="lastmodified" class="lastmod" aria-live="polite"></p>
         <p>&copy; <span id="currentyear"></span> Dream Nigeria. All rights reserved.</p>
-        <script src="scripts/getdates.js"></script>
-        <script src="scripts/culture.js"></script>
     </footer>
 </body>
 </html>

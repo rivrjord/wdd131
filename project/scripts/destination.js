@@ -34,46 +34,40 @@ const destinationsData = [
 ];
 
 /**
- * Generates the HTML string for a single destination card.
- * @param {object} destination - The data object for a single destination.
- * @returns {string} The HTML string for the article element.
+ * Generate the HTML for a destination card.
  */
 function createDestinationCard(destination) {
-    // Uses template literal for clean HTML generation
-    // The target="_blank" attribute is added to open the link in a new tab.
     return `
         <article class="destination-card">
             <img src="${destination.image}" alt="${destination.alt}" loading="lazy">
             <div class="card-info">
                 <h3>${destination.name}</h3>
                 <p>${destination.description}</p>
-                <a href="${destination.link}" class="learn-more" target="_blank">${destination.linkText}</a>
+                <a href="${destination.link}" 
+                   class="learn-more" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                   ${destination.linkText}
+                </a>
             </div>
         </article>
     `;
 }
 
-// -------------------------------------------------------------------
-
 /**
- * Finds the grid container and populates it with all destination cards.
+ * Populate the grid with destination cards.
  */
 function loadDestinations() {
-    // Target the element with class 'destination-grid'
     const gridContainer = document.querySelector('.destination-grid');
 
     if (gridContainer) {
-        // Clear any existing HTML to prevent duplicates or initial content
-        gridContainer.innerHTML = ''; 
+        if (destinationsData.length === 0) {
+            gridContainer.innerHTML = `<p class="no-data">No destinations available at the moment.</p>`;
+            return;
+        }
 
-        // Generate HTML for each destination, storing an array of strings
-        // and then joining them into one large string.
-        const cardsHTML = destinationsData.map(createDestinationCard).join('');
-        
-        // Insert all cards into the container at once for better performance
-        gridContainer.innerHTML = cardsHTML;
+        gridContainer.innerHTML = destinationsData.map(createDestinationCard).join('');
     }
 }
 
-// Run the function when the script loads (due to 'defer' in the HTML link)
-loadDestinations();
+document.addEventListener("DOMContentLoaded", loadDestinations);

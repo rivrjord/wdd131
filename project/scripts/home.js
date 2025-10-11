@@ -1,3 +1,5 @@
+// scripts/home.js
+
 const destinationPlaces = [
     {
         image: 'images/img/obudu.webp',
@@ -31,8 +33,34 @@ const destinationPlaces = [
     }
 ];
 
+// Key for localStorage persistence
+const DESTINATION_INDEX_KEY = 'lastDestinationIndex';
+
 let index = 0;
 let rotationInterval;
+
+// -------------------------------------------------------------------
+// NEW: LOCAL STORAGE LOAD FUNCTION
+// -------------------------------------------------------------------
+
+/**
+ * Checks localStorage for the last saved destination index and sets the global 'index'.
+ */
+function loadLastDestinationIndex() {
+    const savedIndex = localStorage.getItem(DESTINATION_INDEX_KEY);
+    
+    if (savedIndex) {
+        const parsedIndex = parseInt(savedIndex, 10);
+        
+        // Use the saved index only if it's a valid number and within array bounds
+        if (!isNaN(parsedIndex) && parsedIndex >= 0 && parsedIndex < destinationPlaces.length) {
+            index = parsedIndex;
+        } else {
+            // If the saved index is invalid (e.g., data corruption or array size changed), reset to 0
+            index = 0; 
+        }
+    }
+}
 
 // Function to update the destination
 function updateDestination() {
@@ -51,7 +79,11 @@ function updateDestination() {
     destinationHeading.textContent = place.title;
     destinationDescription.textContent = place.description;
 
+    // 1. Calculate the index for the *next* slide
     index = (index + 1) % destinationPlaces.length;
+
+    // 2. NEW: Save the calculated *next* index to localStorage for persistence
+    localStorage.setItem(DESTINATION_INDEX_KEY, index.toString());
 }
 
 // Start the rotation
@@ -100,8 +132,6 @@ function createFestivalCard(festivals) {
         return;
     }
 
-    // Using map and join for more efficient DOM manipulation
-    // NOTE: Added target="_blank" to the <a> tag to open the link in a new tab.
     const festivalCardsHTML = festivals.map(festival => `
         <div class="festival-card">
             <h3>${festival.title}</h3>
@@ -122,12 +152,15 @@ function createFestivalCard(festivals) {
 // Run all necessary initialization after page structure is loaded
 window.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Destination Slide Initialization (Moved from window.onload)
+    // 1. NEW: Load the last index from localStorage to set the starting point
+    loadLastDestinationIndex();
+    
+    // 2. Destination Slide Initialization
+    // The first call uses the 'index' loaded from localStorage
     updateDestination();
     startRotation();
     
-    // 2. Pause on hover (Ensure the element is ready before attaching listeners)
-    // We target the overall card for the destination section
+    // 3. Pause on hover 
     const destinationCard = document.querySelector('.card:first-of-type'); 
 
     if (destinationCard) {
@@ -137,17 +170,17 @@ window.addEventListener('DOMContentLoaded', () => {
         console.warn("Could not find destination card for hover listener.");
     }
     
-    // 3. Festival Card Generation
+    // 4. Festival Card Generation
     createFestivalCard(festivalPlaces);
 
-    // 4. Menu Toggle Setup (moved here to ensure elements are found)
+    // 5. Menu Toggle Setup
     const menuButton = document.querySelector('#menu');
     const nav = document.querySelector('.navigation');
 
     if (menuButton && nav) {
         menuButton.addEventListener('click', () => {
-          menuButton.classList.toggle('show');
-          nav.classList.toggle('show');
+            menuButton.classList.toggle('show');
+            nav.classList.toggle('show');
         });
     } else {
         console.warn("Menu button or navigation not found.");
